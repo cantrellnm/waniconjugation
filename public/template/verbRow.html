@@ -1,0 +1,16 @@
+<td colspan="5">
+  <table class="table table-condensed table-bordered">
+    <tr>
+      <td><span ng-if="['progressive','potential','causative','passive'].indexOf(tense.sh)>-1">category: ichidan</span></td>
+      <td colspan="2">{{enConj[tense.sh].positive.join(', ')}}</td>
+      <td colspan="2">{{enConj[tense.sh].negative.join(', ')}}</td>
+    </tr>
+    <tr>
+      <th>{{tense.display}}</th>
+      <td ng-class="forms[0]" lang-ja ng-model="jaConj[tense.sh][forms[0]].positive[kana]"></td>
+      <td ng-class="forms[1]" lang-ja ng-model="jaConj[tense.sh][forms[1]].positive[kana]"></td>
+      <td ng-class="forms[0]" lang-ja ng-model="jaConj[tense.sh][forms[0]].negative[kana]"></td>
+      <td ng-class="forms[1]" lang-ja ng-model="jaConj[tense.sh][forms[1]].negative[kana]"></td>
+    </tr>
+  </table>
+</td>

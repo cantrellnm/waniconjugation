@@ -1,0 +1,79 @@
+extends layout
+
+block content
+  div(ng-hide='verbsList')
+    h1.text-center loading...
+  .panel.text-center(ng-show='verbsList', ng-controller='TranslateController as tranCtrl')
+    form.panel-heading.text-center.form-inline
+      select.form-control.input-group(ng-model='tranCtrl.whichList', ng-options='list.display for list in tranCtrl.list_options', ng-change='tranCtrl.start = false')
+      |  
+      select.form-control.input-group(ng-model='tranCtrl.lang', ng-options='lang.display for lang in options.lang')
+      |  
+      span.input-group
+        span.input-group-addon Level:
+        |  
+        input.form-control(type='number', min='1', max='50', ng-model='tranCtrl.level', ng-change='tranCtrl.makeList()')
+      |  
+      select.form-control.input-group(ng-model='tranCtrl.howMany', ng-options='many.display for many in options.how_many', ng-change='tranCtrl.makeList()')
+      br
+      p.input-group.checkbox
+        label.text-center
+          input(type='checkbox', ng-model='tranCtrl.forms.plain')
+          |  plain
+        |  
+        label.text-center
+          input(type='checkbox', ng-model='tranCtrl.forms.polite')
+          |  polite
+      |  
+      span.input-group.checkbox.text-left
+        label(ng-if="tranCtrl.whichList.sh==='verbsList'", ng-repeat='tense in options.tenses')
+          input(type='checkbox', value='{{tense.selected}}', ng-model='tense.selected')
+          |  {{ tense.display }}
+        |  
+        label(ng-if="tranCtrl.whichList.sh==='adjList'", ng-repeat='tense in options.adj_tenses')
+          input(type='checkbox', value='{{tense.selected}}', ng-model='tense.selected')
+          |  {{ tense.display }}
+    .panel-body(ng-hide='tranCtrl.start')
+      button.btn(ng-click='tranCtrl.openTran()') Start
+    .panel-body(ng-show='tranCtrl.start')
+      form.form-inline.text-right
+        select.form-control.input-group(ng-model='kan', ng-options='k for k in options.kanji_kana')
+      mark.pull-left(ng-hide="tranCtrl.lang.sh === 'jp' && tranCtrl.hideAnswer", ng-class="{abrupt: tranCtrl.form==='abrupt', plain: tranCtrl.form==='plain', polite: tranCtrl.form==='polite', honorific: tranCtrl.form==='honorific'}")
+        span(ng-show="tranCtrl.form!==''", ng-bind='tranCtrl.form')
+        |  /
+        span(ng-bind='tranCtrl.tense.display')
+        |  /
+        span(ng-show="tranCtrl.form!==''", ng-bind='tranCtrl.direction')
+      |  
+      small.pull-right(ng-show="tranCtrl.lang.sh === 'jp'")
+        | *assume everything is plural for English translations
+        br
+      div(style='clear: both;', ng-class="{'blue-bg': word.category==='ichidan' || word.category==='i-adjective', 'purple-bg': word.category==='godan' || word.category==='na-adjective', 'pink-bg': word.category==='irregular', 'black-bg':tranCtrl.hideAnswer}")
+        span.word(ng-show="tranCtrl.form!=='' && (tranCtrl.lang.sh==='jp' || !tranCtrl.hideAnswer)", lang-ja='', ng-model='word_conjugations[tranCtrl.tense.sh][tranCtrl.form][tranCtrl.direction][kan]')
+        span.word(ng-show="tranCtrl.form==='' && (tranCtrl.lang.sh==='jp' || !tranCtrl.hideAnswer)", lang-ja='', ng-model='word_conjugations[tranCtrl.tense.sh][kan]')
+        |  
+        span.word(ng-show="tranCtrl.hideAnswer && tranCtrl.lang.sh === 'en'") ? ? ?
+      .inner-panel
+        h4(ng-show="tranCtrl.lang.sh === 'en' || !tranCtrl.hideAnswer")
+          | {{(eng_conjugations[tranCtrl.tense.sh][tranCtrl.direction]) ? eng_conjugations[tranCtrl.tense.sh][tranCtrl.direction][0] : eng_conjugations[tranCtrl.tense.sh][0]}}
+        h4(ng-show="tranCtrl.lang.sh === 'jp' && tranCtrl.hideAnswer")  ? ? ?
+      |  
+      input.form-control.input-lg(ng-if="tranCtrl.lang.sh === 'en'", ng-keyup='($event.keyCode===13)?((tranCtrl.hideAnswer)?tranCtrl.submitAnswer():tranCtrl.nextWord()):false', type='text', placeholder='{{tranCtrl.form}}', to-hiragana='', ng-model='tranCtrl.response', ng-class="{'wrong': !tranCtrl.hideAnswer && !tranCtrl.correct}")
+      |  
+      input.form-control.input-lg(ng-if="tranCtrl.lang.sh === 'jp'", ng-keyup='($event.keyCode===13)?((tranCtrl.hideAnswer)?tranCtrl.submitAnswer():tranCtrl.nextWord()):false', type='text', placeholder='english', ng-model='tranCtrl.response', ng-class="{'wrong': !tranCtrl.hideAnswer && !tranCtrl.correct}")
+      nav
+        ul.pager.text-center
+          li
+            button.btn(ng-class='{hidden: !tranCtrl.hideAnswer}', ng-click='tranCtrl.submitAnswer()') Submit
+          li
+            button.btn(ng-class='{hidden: tranCtrl.hideAnswer}', ng-click='tranCtrl.nextWord()') Next
+      div(ng-show='!tranCtrl.hideAnswer && tranCtrl.answers.length> 1')
+        ul.text-left
+          span also:
+          br
+          li.meaning(ng-if="tranCtrl.form!==''", ng-repeat='answer in tranCtrl.answers', ng-hide="(tranCtrl.lang.sh==='jp' && answer===eng_conjugations[tranCtrl.tense.sh][tranCtrl.direction][0]) || (tranCtrl.lang.sh==='en' && answer.kanji===word_conjugations[tranCtrl.tense.sh][tranCtrl.form][tranCtrl.direction].kanji)")
+            span(ng-if="tranCtrl.lang.sh === 'jp'", ng-bind='answer')
+            span(ng-if="tranCtrl.lang.sh === 'en'", lang-ja='', ng-model='answer[kan]')
+          li.meaning(ng-if="tranCtrl.form===''", ng-repeat='answer in tranCtrl.answers', ng-hide="(tranCtrl.lang.sh==='jp' && answer===eng_conjugations[tranCtrl.tense.sh][0]) || (tranCtrl.lang.sh==='en' && answer.kanji===word_conjugations[tranCtrl.tense.sh].kanji)")
+            span(ng-if="tranCtrl.lang.sh === 'jp'", ng-bind='answer')
+            span(ng-if="tranCtrl.lang.sh === 'en'", lang-ja='', ng-model='answer[kan]')

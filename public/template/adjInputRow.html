@@ -1,0 +1,49 @@
+<td ng-if="enConj[tense.sh].positive" colspan="5">
+  <table class="table table-condensed table-bordered">
+    <tr>
+      <td></td>
+      <td colspan="2">{{enConj[tense.sh].positive.join(', ')}}</td>
+      <td colspan="2">{{enConj[tense.sh].negative.join(', ')}}</td>
+    </tr>
+    <tr>
+      <th>{{tense.display}}</th>
+      <td ng-class="forms[0]">
+        <span ng-if="selectedForms.plain" compare-response response="response[tense.sh][forms[0]].positive" answer="jaConj[tense.sh][forms[0]].positive" hide-answer="hideAnswer">
+          <input type="text" ng-disabled="!hideAnswer" ng-model="response[tense.sh][forms[0]].positive" to-hiragana>
+        </span>
+        <span ng-hide="hideAnswer" lang-ja ng-model="jaConj[tense.sh][forms[0]].positive[kana]"></span>
+      </td>
+      <td ng-class="forms[1]">
+        <span ng-if="selectedForms.polite" compare-response response="response[tense.sh][forms[1]].positive" answer="jaConj[tense.sh][forms[1]].positive" hide-answer="hideAnswer">
+          <input type="text" ng-disabled="!hideAnswer" ng-model="response[tense.sh][forms[1]].positive" to-hiragana>
+        </span>
+        <span ng-hide="hideAnswer" lang-ja ng-model="jaConj[tense.sh][forms[1]].positive[kana]"></span>
+      </td>
+      <td ng-class="forms[0]">
+        <span ng-if="selectedForms.plain" compare-response response="response[tense.sh][forms[0]].negative" answer="jaConj[tense.sh][forms[0]].negative" hide-answer="hideAnswer">
+          <input type="text" ng-disabled="!hideAnswer" ng-model="response[tense.sh][forms[0]].negative" to-hiragana>
+        </span>
+        <span ng-hide="hideAnswer" lang-ja ng-model="jaConj[tense.sh][forms[0]].negative[kana]"></span>
+      </td>
+      <td ng-class="forms[1]">
+        <span ng-if="selectedForms.polite" compare-response response="response[tense.sh][forms[1]].negative" answer="jaConj[tense.sh][forms[1]].negative" hide-answer="hideAnswer">
+          <input type="text" ng-disabled="!hideAnswer" ng-model="response[tense.sh][forms[1]].negative" to-hiragana>
+        </span>
+        <span ng-hide="hideAnswer" lang-ja ng-model="jaConj[tense.sh][forms[1]].negative[kana]"></span>
+      </td>
+    </tr>
+  </table>
+</td>
+<td ng-if="jaConj[tense.sh][kana]" colspan="5">
+  <table class="table table-condensed table-bordered">
+    <tr>
+      <th>{{tense.display}}</th>
+      <td colspan="2">{{enConj[tense.sh].join(', ')}}</td>
+      <td colspan="2">
+        <span compare-response response="response[tense.sh]" answer="jaConj[tense.sh]" hide-answer="hideAnswer">
+          <input type="text" ng-disabled="!hideAnswer" ng-model="response[tense.sh]" to-hiragana>
+        </span>
+        <span ng-hide="hideAnswer" lang-ja ng-model="jaConj[tense.sh][kana]"></span>
+      </td>
+  </table>
+</td>

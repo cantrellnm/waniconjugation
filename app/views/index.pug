@@ -1,0 +1,26 @@
+extends layout
+
+block content
+  .text-center
+    button.btn(ng-hide='getKey', ng-click='toggleGetKey()') Add WaniKani API Key
+    |  
+    a(ng-show='getKey', ng-click='removeUser()') Delete User Info
+    |  
+    input.input-lg(ng-show='getKey', type='text', ng-keyup='($event.keyCode===13)?updateUser():null', style='width:32em;', max='32', placeholder='WaniKani User API Key', ng-model='APIkey')
+    |  
+    button.btn(ng-show='getKey', ng-click='updateUser()') Submit
+  .panel
+    .panel-heading
+      h2.text-right(ng-hide='username') All About &apos;Dem Verbs
+      h2.text-right(ng-show='username') Hi, {{username}}!
+    .panel-body
+      p
+        | Welcome to &apos;WaniConjugation&apos;, a site for Japanese language learners to practice conjugating verbs and adjectives. So excite! This collection of 954 verbs and 580 adjectives, their meanings, and their &apos;levels&apos; originates from the Great Crabigator over at 
+        a(href='https://www.wanikani.com') WaniKani
+        | . As such, this tool is optimized for users of that site (mostly because of the levels thing). If you&apos;re not already a member, what are you waiting for!? Go sign up!
+      p
+        | All conjugations and English translations have been generated via script I wrote. I rely on you, my dutiful users, to point and laugh at my mistakes, and then hopefully let me know so I can fix them.
+      p
+        | You can report errors to 
+        a(href='waniconjugation@gmail.com') waniconjugation@gmail.com
+        | .

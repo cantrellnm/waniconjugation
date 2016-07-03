@@ -1,0 +1,25 @@
+<td ng-if="enConj[tense.sh].positive" colspan="5">
+  <table class="table table-condensed table-bordered">
+    <tr>
+      <td></td>
+      <td colspan="2">{{enConj[tense.sh].positive.join(', ')}}</td>
+      <td colspan="2">{{enConj[tense.sh].negative.join(', ')}}</td>
+    </tr>
+    <tr>
+      <th>{{tense.display}}</th>
+      <td ng-class="{plain: jaConj[tense.sh].plain.positive[kana]}" lang-ja ng-model="jaConj[tense.sh].plain.positive[kana]"></td>
+      <td ng-class="{polite: jaConj[tense.sh].polite.positive[kana]}" lang-ja ng-model="jaConj[tense.sh].polite.positive[kana]"></td>
+      <td ng-class="{plain: jaConj[tense.sh].plain.negative[kana]}" lang-ja ng-model="jaConj[tense.sh].plain.negative[kana]"></td>
+      <td ng-class="{polite: jaConj[tense.sh].polite.negative[kana]}" lang-ja ng-model="jaConj[tense.sh].polite.negative[kana]"></td>
+    </tr>
+  </table>
+</td>
+<td ng-if="jaConj[tense.sh][kana]" colspan="5">
+  <table class="table table-condensed table-bordered">
+    <tr>
+      <th>{{tense.display}}</th>
+      <td colspan="2">{{enConj[tense.sh].join(', ')}}</td>
+      <td colspan="2" lang-ja ng-model="jaConj[tense.sh][kana]"></td>
+    </tr>
+  </table>
+</td>

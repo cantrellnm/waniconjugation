@@ -1,0 +1,61 @@
+extends layout
+
+block content
+  div(ng-controller='AdjListController as listCtrl')
+    div(ng-hide='adjList')
+      h1.text-center loading...
+    .panel.list(ng-if='adjList')
+      nav.panel-heading
+        .text-center
+          button.btn(ng-show='username', ng-click='listCtrl.myAdj()') My Adjectives
+        |  
+        span.h3 Level:
+        ul.bubble-select(name='levelSelect')
+          li(ng-repeat='lvl in getNumber(60) track by $index', ng-class='{active: $index+1===listCtrl.level}')
+            a(ng-click='listCtrl.displayLevel($index+1)') {{$index+1}}
+        .input-group
+          span.input-group-addon
+            span.glyphicon.glyphicon-search
+          |  
+          input.form-control(type='text', placeholder='Search for...', ng-model='listCtrl.searchFor', ng-change='listCtrl.findWord()')
+      .panel-body(ng-show='listCtrl.displayList')
+        p {{listCtrl.displayList.length}} Adjectives
+        .word-container.clickable(ng-repeat="entry in listCtrl.displayList | orderBy:'level'", ng-click='listCtrl.openWord(entry.word)', ng-class="{'blue-bg': entry.category==='i-adjective', 'purple-bg': entry.category==='na-adjective'}")
+          span.word.clickable(ng-bind='entry.word', lang='ja')
+    .screen(ng-show='listCtrl.showWord')
+    .pop-up(ng-show='listCtrl.showWord', esc-close-word='')
+      span.glyphicon.glyphicon-remove(ng-click='listCtrl.closeWord()', role='button')
+      .word-container(ng-class="{'blue-bg': word.category==='i-adjective', 'purple-bg': word.category==='na-adjective'}")
+        span.word(ng-show="kan === 'kanji'", lang-ja='', ng-model='word.word')
+        span.word(ng-show="kan === 'kana'", lang-ja='', ng-model='word.reading')
+      .inner-panel
+        mark.pull-left level {{word.level}}
+        form.form-inline.text-right
+          select.form-control.input-group(ng-model='kan', ng-options='k for k in options.kanji_kana')
+        ul.text-center
+          li.meaning.clickable(ng-repeat='meaning in word.meanings', ng-click="setEng(meaning, 'adjList')", ng-class="{'active': meaning === eng}")  {{meaning}}
+        table.table.table-bordered
+          tr
+            td(colspan='5')
+              table.table.table-condensed.table-bordered
+                tr
+                  th reading
+                  th attributive
+                  th noun
+                  th adverb
+                tr
+                  td(lang-ja='', ng-model='word.reading')
+                  td(lang-ja='', ng-model='word_conjugations.attributive[kan]')
+                  td(lang-ja='', ng-model='word_conjugations.noun[kan]')
+                  td(lang-ja='', ng-model='word_conjugations.adverb[kan]')
+          tr
+            th category
+            th(colspan='2') positive
+            th(colspan='2') negative
+          tr
+            td(ng-bind='word.category')
+            th.plain plain
+            th.polite polite
+            th.plain plain
+            th.polite polite
+          tr(adj-conj-row='', word='word', ng-repeat='tense in options.adj_tenses', tense='tense', ja-conj='word_conjugations', en-conj='eng_conjugations', kana='kan')

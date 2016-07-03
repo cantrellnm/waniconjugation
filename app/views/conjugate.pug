@@ -1,0 +1,132 @@
+extends layout
+
+block content
+  div(ng-hide='verbsList')
+    h1.text-center loading...
+  .panel.text-center(ng-show='verbsList', ng-controller='ConjugateController as conjCtrl')
+    form.panel-heading.text-center.form-inline
+      select.form-control.input-group(ng-model='conjCtrl.whichList', ng-options='list.display for list in conjCtrl.list_options', ng-change='conjCtrl.start = false')
+      |  
+      span.input-group
+        span.input-group-addon Level:
+        |  
+        input.form-control(type='number', min='1', max='50', ng-model='conjCtrl.level', ng-change='conjCtrl.makeList()')
+      |  
+      select.form-control.input-group(ng-model='conjCtrl.howMany', ng-options='many.display for many in options.how_many', ng-change='conjCtrl.makeList()')
+      br
+      p.input-group.checkbox
+        label.text-center
+          input(type='checkbox', ng-model='conjCtrl.forms.plain')
+          |  plain
+        |  
+        label.text-center
+          input(type='checkbox', ng-model='conjCtrl.forms.polite')
+          |  polite
+        |  | 
+        label.text-center(ng-if="conjCtrl.whichList.sh==='verbsList'")
+          input(type='checkbox', ng-model='conjCtrl.i_stem')
+          |  stem
+        |  
+        label.text-center(ng-if="conjCtrl.whichList.sh==='verbsList'")
+          input(type='checkbox', ng-model='conjCtrl.te_stem')
+          |  te-form
+        |  
+        label.text-center(ng-if="conjCtrl.whichList.sh==='adjList'")
+          input(type='checkbox', ng-model='conjCtrl.attributive')
+          |  attributive
+        |  
+        label.text-center(ng-if="conjCtrl.whichList.sh==='adjList'")
+          input(type='checkbox', ng-model='conjCtrl.noun')
+          |  noun
+        |  
+        label.text-center(ng-if="conjCtrl.whichList.sh==='adjList'")
+          input(type='checkbox', ng-model='conjCtrl.adverb')
+          |  adverb
+      |  
+      span.input-group.checkbox.text-left
+        label(ng-if="conjCtrl.whichList.sh==='verbsList'", ng-repeat='tense in options.tenses')
+          input(type='checkbox', value='{{tense.selected}}', ng-model='tense.selected')
+          |  {{ tense.display }}
+        |  
+        label(ng-if="conjCtrl.whichList.sh==='adjList'", ng-repeat='tense in options.adj_tenses')
+          input(type='checkbox', value='{{tense.selected}}', ng-model='tense.selected')
+          |  {{ tense.display }}
+    .panel-body(ng-hide='conjCtrl.start')
+      button.btn(ng-click='conjCtrl.openConj()') Start
+    .panel-body(ng-show='conjCtrl.start')
+      .word-container(ng-class="{'blue-bg': word.category==='ichidan'||word.category==='i-adjective', 'purple-bg': word.category==='godan'||word.category==='na-adjective', 'pink-bg': word.category==='irregular', 'black-bg':conjCtrl.hideAnswer}")
+        span.glyphicon.glyphicon-volume-up
+        span.word(ng-if="conjCtrl.whichList.sh==='verbsList'", ng-show="kan==='kanji'", lang-ja='', ng-model='word.verb')
+        span.word(ng-if="conjCtrl.whichList.sh==='adjList'", ng-show="kan==='kanji'", lang-ja='', ng-model='word.word')
+        span.word(ng-show="kan === 'kana'", lang-ja='', ng-model='word.reading')
+      .inner-panel
+        mark.pull-left level {{word.level}}
+        form.form-inline.text-right
+          select.form-control.input-group(ng-model='kan', ng-options='k for k in options.kanji_kana')
+        ul.text-center
+          li.meaning.clickable(ng-repeat='meaning in word.meanings', ng-click='setEng(meaning, conjCtrl.whichList.sh)', ng-class="{'active': meaning === eng.infinitive || meaning === eng}")  {{meaning}}
+        table.table(automatic-focus='', hide-answer='conjCtrl.hideAnswer', start='conjCtrl.start')
+          tr
+            td(colspan='5')
+              table.table.table-condensed.table-bordered
+                tr
+                  th {{(conjCtrl.whichList.sh===&apos;verbsList&apos;)? &apos;&apos; : &apos;reading&apos; }}
+                  th {{(conjCtrl.whichList.sh===&apos;verbsList&apos;)? &apos;reading&apos; : &apos;attributive&apos; }}
+                  th {{(conjCtrl.whichList.sh===&apos;verbsList&apos;)? &apos;stem&apos; : &apos;noun&apos; }}
+                  th {{(conjCtrl.whichList.sh===&apos;verbsList&apos;)? &apos;te-form&apos; : &apos;adverb&apos; }}
+                tr
+                  td(ng-if="conjCtrl.whichList.sh==='verbsList'")
+                  td(lang-ja='', ng-model='word.reading')
+                  td(ng-if="conjCtrl.whichList.sh==='verbsList'")
+                    span(ng-if='conjCtrl.i_stem', compare-response='', response='conjCtrl.response.i_stem', answer='word_conjugations.i_stem', hide-answer='conjCtrl.hideAnswer')
+                      input(type='text', ng-disabled='!conjCtrl.hideAnswer', ng-model='conjCtrl.response.i_stem', to-hiragana='')
+                    span(ng-hide='conjCtrl.hideAnswer', lang-ja='', ng-model='word_conjugations.i_stem[kan]')
+                  td(ng-if="conjCtrl.whichList.sh==='verbsList'")
+                    span(ng-if='conjCtrl.te_stem', compare-response='', response='conjCtrl.response.te_stem', answer='word_conjugations.te_stem', hide-answer='conjCtrl.hideAnswer')
+                      input(type='text', ng-disabled='!conjCtrl.hideAnswer', ng-model='conjCtrl.response.te_stem', to-hiragana='')
+                    span(ng-hide='conjCtrl.hideAnswer', lang-ja='', ng-model='word_conjugations.te_stem[kan]')
+                  td(ng-if="conjCtrl.whichList.sh==='adjList'")
+                    span(ng-if='conjCtrl.attributive', compare-response='', response='conjCtrl.response.attributive', answer='word_conjugations.attributive', hide-answer='conjCtrl.hideAnswer')
+                      input(type='text', ng-disabled='!conjCtrl.hideAnswer', ng-model='conjCtrl.response.attributive', to-hiragana='')
+                    span(ng-hide='conjCtrl.hideAnswer', lang-ja='', ng-model='word_conjugations.attributive[kan]')
+                  td(ng-if="conjCtrl.whichList.sh==='adjList'")
+                    span(ng-if='conjCtrl.noun', compare-response='', response='conjCtrl.response.noun', answer='word_conjugations.noun', hide-answer='conjCtrl.hideAnswer')
+                      input(type='text', ng-disabled='!conjCtrl.hideAnswer', ng-model='conjCtrl.response.noun', to-hiragana='')
+                    span(ng-hide='conjCtrl.hideAnswer', lang-ja='', ng-model='word_conjugations.noun[kan]')
+                  td(ng-if="conjCtrl.whichList.sh==='adjList'")
+                    span(ng-if='conjCtrl.adverb', compare-response='', response='conjCtrl.response.adverb', answer='word_conjugations.adverb', hide-answer='conjCtrl.hideAnswer')
+                      input(type='text', ng-disabled='!conjCtrl.hideAnswer', ng-model='conjCtrl.response.adverb', to-hiragana='')
+                    span(ng-hide='conjCtrl.hideAnswer', lang-ja='', ng-model='word_conjugations.adverb[kan]')
+          tr
+            th category
+            th(colspan='2') positive
+            th(colspan='2') negative
+          tr
+            td
+              span(ng-show='!conjCtrl.hideAnswer', ng-bind='word.category')
+            th.plain plain
+            th.polite polite
+            th.plain plain
+            th.polite polite
+          tr(verb-input-row='', ng-repeat='tense in tenses', ng-if="conjCtrl.whichList.sh==='verbsList' && tense.sh!=='imperative'&&tense.sh!=='request'", tense='tense', ja-conj='word_conjugations', en-conj='eng_conjugations', kana='kan', forms="['plain','polite']", selected-forms='conjCtrl.forms', hide-answer='conjCtrl.hideAnswer', response='conjCtrl.response')
+          tr(adj-input-row='', ng-repeat='tense in adj_tenses', ng-if="conjCtrl.whichList.sh==='adjList'", tense='tense', ja-conj='word_conjugations', en-conj='eng_conjugations', kana='kan', forms="['plain','polite']", selected-forms='conjCtrl.forms', hide-answer='conjCtrl.hideAnswer', response='conjCtrl.response')
+          tr(ng-if="conjCtrl.whichList.sh==='verbsList' && options.tenses[11].selected")
+            td
+            th.abrupt abrupt
+            th.plain plain
+            th.abrupt abrupt
+            th.plain plain
+          tr(ng-if="conjCtrl.whichList.sh==='verbsList' && options.tenses[11].selected", verb-input-row='', tense='options.tenses[11]', ja-conj='word_conjugations', en-conj='eng_conjugations', kana='kan', forms="['abrupt','plain']", selected-forms='conjCtrl.forms', hide-answer='conjCtrl.hideAnswer', response='conjCtrl.response')
+          tr(ng-if="conjCtrl.whichList.sh==='verbsList' && options.tenses[12].selected")
+            td
+            th.polite polite
+            th.honorific honorific
+            th.polite polite
+            th.honorific honorific
+          tr(ng-if="conjCtrl.whichList.sh==='verbsList' && options.tenses[12].selected", verb-input-row='', tense='options.tenses[12]', ja-conj='word_conjugations', en-conj='eng_conjugations', kana='kan', forms="['polite','honorific']", selected-forms='conjCtrl.forms', hide-answer='conjCtrl.hideAnswer', response='conjCtrl.response')
+      nav
+        ul.pager.text-center
+          li
+            button.btn.btn-default(ng-class='{hidden: !conjCtrl.hideAnswer}', ng-click='conjCtrl.submitAnswer()') Submit
+          li
+            button#next.btn.btn-default(ng-class='{hidden: conjCtrl.hideAnswer}', ng-click='conjCtrl.nextWord()') Next

@@ -1,0 +1,75 @@
+extends layout
+
+block content
+  div(ng-controller='VerbsListController as listCtrl')
+    div(ng-hide='verbsList')
+      h1.text-center loading...
+    .panel.list(ng-if='verbsList', ng-init='list = verbsList')
+      nav.panel-heading
+        .text-center
+          button.btn(ng-show='username', ng-click='listCtrl.myVerbs()') My Verbs
+        |  
+        span.h3 Level:
+        ul.bubble-select(name='levelSelect')
+          li(ng-repeat='lvl in getNumber(60) track by $index', ng-class='{active: $index+1===listCtrl.level}')
+            a(ng-click='listCtrl.displayLevel($index+1)') {{$index+1}}
+        .input-group
+          span.input-group-addon
+            span.glyphicon.glyphicon-search
+          |  
+          input.form-control(type='text', placeholder='Search for...', ng-model='listCtrl.searchFor', ng-change='listCtrl.findWord()')
+      .panel-body(ng-show='listCtrl.displayList')
+        p {{listCtrl.displayList.length}} Verbs
+        .word-container.clickable(ng-repeat="entry in listCtrl.displayList | orderBy:'level'", ng-click='listCtrl.openWord(entry.verb)', ng-class="{'blue-bg': entry.category==='ichidan', 'purple-bg': entry.category==='godan', 'pink-bg': entry.category==='irregular'}")
+          span.word.clickable(ng-bind='entry.verb', lang='ja')
+    .screen(ng-show='listCtrl.showWord')
+    .pop-up(ng-show='listCtrl.showWord', esc-close-word='')
+      span.glyphicon.glyphicon-remove(ng-click='listCtrl.closeWord()', role='button')
+      .word-container(ng-class="{'blue-bg': word.category==='ichidan', 'purple-bg': word.category==='godan', 'pink-bg': word.category==='irregular'}")
+        span.word(ng-show="kan === 'kanji'", ng-model='word.verb', lang-ja='')
+        span.word(ng-show="kan === 'kana'", ng-model='word.reading', lang-ja='')
+      .inner-panel
+        mark.pull-left level {{word.level}}
+        form.form-inline.text-right
+          select.form-control.input-group(ng-model='kan', ng-options='k for k in options.kanji_kana')
+        ul.text-center
+          li.meaning.clickable(ng-repeat='meaning in word.meanings', ng-click="setEng(meaning, 'verbsList')", ng-class="{'active': meaning === eng.infinitive}")  {{meaning}}
+        table.table
+          tr
+            td(colspan='5')
+              table.table.table-condensed.table-bordered
+                tr
+                  th category
+                  th reading
+                  th stem
+                  th te-form
+                tr
+                  td(ng-bind='word.category')
+                  td(lang-ja='', ng-model='word.reading')
+                  td(lang-ja='', ng-model='word_conjugations.i_stem[kan]')
+                  td(lang-ja='', ng-model='word_conjugations.te_stem[kan]')
+          tr
+            td
+            th(colspan='2') positive
+            th(colspan='2') negative
+          tr
+            td
+            th.plain plain
+            th.polite polite
+            th.plain plain
+            th.polite polite
+          tr(verb-conj-row='', ng-repeat='tense in options.tenses', ng-if="tense.sh!=='imperative'&&tense.sh!=='request'", tense='tense', ja-conj='word_conjugations', en-conj='eng_conjugations', kana='kan', forms="['plain','polite']")
+          tr
+            td
+            th.abrupt abrupt
+            th.plain plain
+            th.abrupt abrupt
+            th.plain plain
+          tr(verb-conj-row='', tense='options.tenses[11]', ja-conj='word_conjugations', en-conj='eng_conjugations', kana='kan', forms="['abrupt','plain']")
+          tr
+            td
+            th.polite polite
+            th.honorific honorific
+            th.polite polite
+            th.honorific honorific
+          tr(verb-conj-row='', tense='options.tenses[12]', ja-conj='word_conjugations', en-conj='eng_conjugations', kana='kan', forms="['polite','honorific']")
