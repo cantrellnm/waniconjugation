@@ -5,6 +5,7 @@ var express = require('express');
 var app = express();
 var server = http.createServer(app);
 
+require('./app/db');
 var routes = require('./app/routes');
 
 app.set('views', path.join(__dirname, 'app', 'views'));
