@@ -2,7 +2,7 @@ extends layout
 
 block content
   .text-center
-    button.btn(ng-hide='getKey', ng-click='toggleGetKey()') Add WaniKani API Key
+    button.btn(ng-hide='getKey', ng-click='toggleGetKey()')= (username) ? 'Change WaniKani API Key' : 'Add WaniKani API Key'
     |  
     a(ng-show='getKey', ng-click='removeUser()') Delete User Info
     |  
@@ -11,7 +11,7 @@ block content
     button.btn(ng-show='getKey', ng-click='updateUser()') Submit
   .panel
     .panel-heading
-      h2.text-right(ng-hide='username') All About &apos;Dem Verbs
+      h2.text-right(ng-hide='username') Welcome
       h2.text-right(ng-show='username') Hi, {{username}}!
     .panel-body
       p

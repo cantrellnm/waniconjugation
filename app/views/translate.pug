@@ -1,9 +1,7 @@
 extends layout
 
 block content
-  div(ng-hide='verbsList')
-    h1.text-center loading...
-  .panel.text-center(ng-show='verbsList', ng-controller='TranslateController as tranCtrl')
+  .panel.text-center(ng-controller='TranslateController as tranCtrl')
     form.panel-heading.text-center.form-inline
       select.form-control.input-group(ng-model='tranCtrl.whichList', ng-options='list.display for list in tranCtrl.list_options', ng-change='tranCtrl.start = false')
       |  
@@ -26,11 +24,11 @@ block content
           |  polite
       |  
       span.input-group.checkbox.text-left
-        label(ng-if="tranCtrl.whichList.sh==='verbsList'", ng-repeat='tense in options.tenses')
+        label(ng-if="tranCtrl.whichList.sh==='verbs'", ng-repeat='tense in options.tenses')
           input(type='checkbox', value='{{tense.selected}}', ng-model='tense.selected')
           |  {{ tense.display }}
         |  
-        label(ng-if="tranCtrl.whichList.sh==='adjList'", ng-repeat='tense in options.adj_tenses')
+        label(ng-if="tranCtrl.whichList.sh==='adj'", ng-repeat='tense in options.adj_tenses')
           input(type='checkbox', value='{{tense.selected}}', ng-model='tense.selected')
           |  {{ tense.display }}
     .panel-body(ng-hide='tranCtrl.start')

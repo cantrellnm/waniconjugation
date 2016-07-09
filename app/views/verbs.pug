@@ -1,26 +1,24 @@
 extends layout
 
 block content
-  div(ng-controller='VerbsListController as listCtrl')
-    div(ng-hide='verbsList')
-      h1.text-center loading...
-    .panel.list(ng-if='verbsList', ng-init='list = verbsList')
+  div(ng-controller='ListController as listCtrl')
+    .panel.list
       nav.panel-heading
         .text-center
-          button.btn(ng-show='username', ng-click='listCtrl.myVerbs()') My Verbs
+          button.btn(ng-show='username', ng-click='listCtrl.myWords("verbs")') My Verbs
         |  
         span.h3 Level:
         ul.bubble-select(name='levelSelect')
           li(ng-repeat='lvl in getNumber(60) track by $index', ng-class='{active: $index+1===listCtrl.level}')
-            a(ng-click='listCtrl.displayLevel($index+1)') {{$index+1}}
+            a(ng-click='listCtrl.displayLevel($index+1, "verbs")') {{$index+1}}
         .input-group
           span.input-group-addon
             span.glyphicon.glyphicon-search
           |  
-          input.form-control(type='text', placeholder='Search for...', ng-model='listCtrl.searchFor', ng-change='listCtrl.findWord()')
+          input.form-control(type='text', placeholder='Search for...', ng-model='listCtrl.searchFor', ng-change='listCtrl.findWord("verbs")')
       .panel-body(ng-show='listCtrl.displayList')
         p {{listCtrl.displayList.length}} Verbs
-        .word-container.clickable(ng-repeat="entry in listCtrl.displayList | orderBy:'level'", ng-click='listCtrl.openWord(entry.verb)', ng-class="{'blue-bg': entry.category==='ichidan', 'purple-bg': entry.category==='godan', 'pink-bg': entry.category==='irregular'}")
+        .word-container.clickable(ng-repeat="entry in listCtrl.displayList | orderBy:'level'", ng-click='listCtrl.openWord(entry, "verbs")', ng-class="{'blue-bg': entry.category==='ichidan', 'purple-bg': entry.category==='godan', 'pink-bg': entry.category==='irregular'}")
           span.word.clickable(ng-bind='entry.verb', lang='ja')
     .screen(ng-show='listCtrl.showWord')
     .pop-up(ng-show='listCtrl.showWord', esc-close-word='')
@@ -33,7 +31,7 @@ block content
         form.form-inline.text-right
           select.form-control.input-group(ng-model='kan', ng-options='k for k in options.kanji_kana')
         ul.text-center
-          li.meaning.clickable(ng-repeat='meaning in word.meanings', ng-click="setEng(meaning, 'verbsList')", ng-class="{'active': meaning === eng.infinitive}")  {{meaning}}
+          li.meaning.clickable(ng-repeat='meaning in word.meanings', ng-click='setEng(meaning, "verbs")', ng-class="{'active': meaning === eng.infinitive}")  {{meaning}}
         table.table
           tr
             td(colspan='5')

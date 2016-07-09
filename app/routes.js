@@ -12,6 +12,8 @@ router.get('/api/verbs', ctrl.verbList);
 router.get('/api/en_verbs', ctrl.en_verbList);
 router.get('/api/adj', ctrl.adjList);
 
+router.get('/api/user/:key', ctrl.userInfo);
+
 router.get('/api/verbs/:verb', ctrl.findVerb);
 router.get('/api/en_verbs/:en_verb', ctrl.findEn_verb);
 router.get('/api/adj/:adj', ctrl.findAdj);

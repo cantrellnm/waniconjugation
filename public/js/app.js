@@ -18,51 +18,41 @@ app.value('responsiveVoice', responsiveVoice);
 
 app.controller('AppController', function($scope, $http, filterFilter) {
   
-  if(localStorage.getItem('userInfo')) {
-    $scope.username = JSON.parse(localStorage.getItem('userInfo')).username;
+  $scope.fetchData = function (url, callback) {
+    $http.get(url).success(function(data, status, headers, config) {
+      if (typeof data === 'object') {
+        callback(data, url);
+      } else {
+        console.log('Error fetching data from '+url);
+        console.log(JSON.stringify(data));
+      }
+    });
   }
   
+  // API-KEY VARIABLES AND FUNCTIONS
   
   $scope.APIkey = (localStorage.getItem('userInfo')) ? JSON.parse(localStorage.getItem('userInfo')).APIkey : '';
   $scope.getKey = false;
   $scope.toggleGetKey = function(){$scope.getKey = !$scope.getKey;};
   
+  // DOWNLOAD/STORE/UPDATE USER INFO WITH API-KEY
+  
+  if(localStorage.getItem('userInfo')) {
+    $scope.username = JSON.parse(localStorage.getItem('userInfo')).username;
+  }
+  
   $scope.updateUser = function() {
-    $.ajax({url: "https://www.wanikani.com/api/user/"+$scope.APIkey+"/vocabulary/", dataType: 'jsonp', success: function(data, status, headers, config) {
-      if (data.error || status !== 'success') {
-        if ($scope.getKey) {
-          alert('Error fetching data from WaniKani');
-        }
-        console.log(JSON.stringify(data.error));
+    $scope.fetchData('/api/user/'+$scope.APIkey, function(data) {
+      data.updated_at = Date.now();
+      localStorage.setItem('userInfo', JSON.stringify(data));
+      if ($scope.getKey) {
+        alert('User information updated!');
       } else {
-        var saveStuff = {
-          username: data.user_information.username,
-          level: data.user_information.level,
-          APIkey: $scope.APIkey,
-          verbsList: [],
-          adjList: [],
-          updated_at: Date.now()
-        };
-        data.requested_information.general.forEach(function(word, i, arr){
-          var verb = $scope.verbsList.filter(function(v){return v.verb === word.character;});
-          var adj = $scope.adjList.filter(function(a){return a.word === word.character});
-          if (verb.length > 0 && word.user_specific) {
-            saveStuff.verbsList.push(verb[0]);
-          }
-          if (adj.length > 0 && word.user_specific) {
-            saveStuff.adjList.push(adj[0]);
-          }
-        });
-        localStorage.setItem('userInfo', JSON.stringify(saveStuff));
-        if ($scope.getKey) {
-          alert('User information updated!');
-        } else {
-          console.log('user info updated');
-        }
-        $scope.username = saveStuff.username;
-        $scope.$apply(function(){$scope.getKey = false;});
+        console.log('user info updated');
       }
-    }});
+      $scope.username = data.username;
+      $scope.$apply(function(){$scope.getKey = false;});
+    });
   };
   $scope.removeUser = function() {
     localStorage.removeItem('userInfo');
@@ -70,77 +60,35 @@ app.controller('AppController', function($scope, $http, filterFilter) {
     $scope.username = '';
   };
   
-  // UPDATE USER INFO HERE IF OLD
-  
-  if(localStorage.getItem('verbsList') && JSON.parse(localStorage.getItem('verbsList')).updated_at > (Date.now()-86400000)) {
-    $scope.verbsList = JSON.parse(localStorage.getItem('verbsList')).verbs;
-    console.log('loading verbs list from '+(Date.now()-JSON.parse(localStorage.getItem('verbsList')).updated_at)+' ago');
-    if($scope.verbsList.length === 0) {
-      console.log('Warning: verbslist is empty.');
-    }
-    if(localStorage.getItem('userInfo') && JSON.parse(localStorage.getItem('userInfo')).updated_at < (Date.now()-21600000)) {
-      $scope.updateUser();
-    }
-  } else {
-    $http.get("./json/verbs.json").success(function(data, status, headers, config) {
-      $scope.verbsList = data.verbs;
-      localStorage.setItem('verbsList', JSON.stringify({"updated_at": Date.now(), "verbs": data.verbs}));
-      console.log('downloaded verbs');
-      if($scope.verbsList.length === 0) {
-        console.log('Warning: verbslist is empty.');
-      }
-      if(localStorage.getItem('userInfo') && JSON.parse(localStorage.getItem('userInfo')).updated_at < (Date.now()-21600000)) {
-        $scope.updateUser();
-      }
-    });
-  }
-  if(localStorage.getItem('verbsEngList') && JSON.parse(localStorage.getItem('verbsEngList')).updated_at > (Date.now()-86400000)) {
-    $scope.engList = JSON.parse(localStorage.getItem('verbsEngList')).verbs;
-    console.log('loading eng list from '+(Date.now()-JSON.parse(localStorage.getItem('verbsEngList')).updated_at)+' ago');
-  } else {
-    $http.get("./json/verbsEng.json").success(function(data, status, headers, config) {
-      $scope.engList = data.verbs;
-      localStorage.setItem('verbsEngList', JSON.stringify({"updated_at": Date.now(), "verbs": data.verbs}));
-      console.log('downloaded eng');
-    });
-  }
-  if(localStorage.getItem('adjList') && JSON.parse(localStorage.getItem('adjList')).updated_at > (Date.now()-86400000)) {
-    $scope.adjList = JSON.parse(localStorage.getItem('adjList')).words;
-    console.log('loading adjectives from '+(Date.now()-JSON.parse(localStorage.getItem('adjList')).updated_at)+' ago');
-  } else {
-    $http.get("./json/adjectives.json").success(function(data, status, headers, config) {
-      $scope.adjList = data.words;
-      localStorage.setItem('adjList', JSON.stringify({"updated_at": Date.now(), "words": data.words}));
-      console.log('downloaded adjectives');
-    });
+  if(localStorage.getItem('userInfo') && JSON.parse(localStorage.getItem('userInfo')).updated_at < (Date.now()-21600000)) {
+    $scope.updateUser();
   }
   
-  $scope.getConjugations = function(word) {
+  // FUNCTIONS TO SELECT AND CONJUGATE WORDS
+  
+  $scope.verbConjugations = function(word) {
     var conjugations;
-    if(word.category==='irregular') {
+    if (word.category==='irregular')
       conjugations = (word.verb === '来る') ? kuru_conjugation() : suru_conjugation(word) ;
-    } else {
+    else
       conjugations = conjugate(word);
-    }
     return conjugations;
-  }
-  $scope.getEngConjugations = function(word) {
-    return eng_conjugation(word);
-  }
-  $scope.setWord = function(wrd, list) {
-    if (list === 'verbsList') {
-      $scope.word = $scope.verbsList.filter(function(e){return e.verb === wrd})[0];
-      $scope.word_conjugations = $scope.getConjugations($scope.word);
-    } else if (list === 'adjList') {
-      $scope.word = $scope.adjList.filter(function(e){return e.word === wrd})[0];
-      $scope.word_conjugations = ($scope.word.category === 'i-adjective') ? i_adj_conjugation($scope.word) : na_adj_conjugation($scope.word) ;
-    }
+  };
+  $scope.setWord = function(word, list) {
+    $scope.word = word;
+    if (list === 'verbs')
+      $scope.word_conjugations = $scope.verbConjugations(word);
+    else
+      $scope.word_conjugations = (word.category === 'i-adjective') ? i_adj_conjugation(word) : na_adj_conjugation(word) ;
   };
   $scope.setEng = function(wrd, list) {
-    if (list === 'verbsList') {
-      $scope.eng = $scope.engList.filter(function(e){return e.infinitive === wrd})[0];
-      $scope.eng_conjugations = $scope.getEngConjugations($scope.eng);
-    } else if (list === 'adjList') {
+    if (list === 'verbs') {
+      $scope.fetchData('/api/en_verbs/'+wrd, function(data) {
+        $scope.eng = data[0];
+        $scope.eng_conjugations = eng_conjugation(data[0]);
+      });
+      // $scope.eng = $scope.engList.filter(function(e){return e.infinitive === wrd})[0];
+    } else if (list === 'adj') {
       $scope.eng = wrd;
       $scope.eng_conjugations = eng_adj_conjugation($scope.eng);
     }
@@ -153,6 +101,8 @@ app.controller('AppController', function($scope, $http, filterFilter) {
     $scope.eng = {};
     $scope.eng_conjugations = {};
   };
+  
+  // AVAILABLE OPTIONS FOR TRANSLATION & CONJUGATION
   
   $scope.options = {
     lang: [{display: 'Eng to Jap', sh: 'en'}, {display: 'Jap to Eng', sh: 'jp'}],
@@ -189,6 +139,8 @@ app.controller('AppController', function($scope, $http, filterFilter) {
     kanji_kana: ['kanji', 'kana']
   };
   
+  // SELECTED OPTIONS FOR TRANSLATION & CONJUGATION
+  
   $scope.options.tenses = (localStorage.getItem('tenses')) ? JSON.parse(localStorage.getItem('tenses')) : $scope.options.tenses;
   $scope.options.adj_tenses = (localStorage.getItem('adj_tenses')) ? JSON.parse(localStorage.getItem('adj_tenses')) : $scope.options.adj_tenses;
   
@@ -216,6 +168,7 @@ app.controller('AppController', function($scope, $http, filterFilter) {
     localStorage.setItem('adj_tenses', JSON.stringify($scope.options.adj_tenses));
   }, true);
   
+  // MISC
   
   $scope.getNumber = function(num) {
     return new Array(num);   
@@ -224,27 +177,29 @@ app.controller('AppController', function($scope, $http, filterFilter) {
   $scope.wanakana = wanakana;
 });
 
-app.controller('VerbsListController', ['$scope', function($scope) {
+app.controller('ListController', ['$scope', function($scope) {
   var ctrl = this;
   
   this.level = 0;
-  this.displayLevel = function(num){
+  this.displayLevel = function(num, list){
     ctrl.searchFor = '';
     ctrl.level = num;
-    ctrl.displayList = $scope.verbsList.filter(function(w){return  w.level === num;});
+    $scope.fetchData('/api/'+list+'?level='+num, function(data) {
+      ctrl.displayList = data;
+    });
   };
-  this.myVerbs = function(){
+  this.myWords = function(list){
     ctrl.level = 0;
     ctrl.displayList = [];
     if(localStorage.getItem('userInfo')) {
-      ctrl.displayList = JSON.parse(localStorage.getItem('userInfo')).verbsList;
+      ctrl.displayList = JSON.parse(localStorage.getItem('userInfo'))[list];
     }
   };
   
   this.showWord = false;
-  this.openWord = function(wrd) {
-    $scope.setWord(wrd, 'verbsList');
-    $scope.setEng($scope.word.meanings[0], 'verbsList');
+  this.openWord = function(word, list) {
+    $scope.setWord(word, list);
+    $scope.setEng(word.meanings[0], list);
     ctrl.showWord = true;
   };
   this.closeWord = function() {
@@ -253,77 +208,17 @@ app.controller('VerbsListController', ['$scope', function($scope) {
   };
   
   this.searchFor = '';
-  this.findWord = function() {
+  this.findWord = function(list) {
     ctrl.level = 0;
     ctrl.displayList = [];
-    $scope.verbsList.forEach(function(word){
-      if (hasStringValue(word, ctrl.searchFor)) {
-        ctrl.displayList.push(word);
-      }
+    $scope.fetchData('/api/'+list+'/search/'+ctrl.searchFor, function(data, url) {
+      //only update if returned data is from current search
+      if (url === '/api/'+list+'/search/'+ctrl.searchFor)
+        ctrl.displayList = data;
     });
   };
-  
-  function hasStringValue(obj, str) {
-    var hasString = false;
-    obj.meanings.forEach(function(e){ (e.indexOf(str) > -1) ? hasString = true : null; });
-    if(obj.verb) {
-      if(obj.verb.indexOf(str) > -1 || obj.reading.indexOf(str) > -1) {hasString = true;}
-    } else if (obj.word) {
-      if(obj.word.indexOf(str) > -1 || obj.reading.indexOf(str) > -1) {hasString = true;}
-    }
-    return hasString;
-  }
 }]);
-app.controller('AdjListController', ['$scope', function($scope) {
-  var ctrl = this;
-  
-  this.level = 0;
-  this.displayLevel = function(num){
-    ctrl.searchFor = '';
-    ctrl.level = num;
-    ctrl.displayList = $scope.adjList.filter(function(w){return  w.level === num;});
-  };
-  this.myAdj = function(){
-    ctrl.level = 0;
-    ctrl.displayList = [];
-    if(localStorage.getItem('userInfo')) {
-      ctrl.displayList = JSON.parse(localStorage.getItem('userInfo')).adjList;
-    }
-  };
-  
-  this.showWord = false;
-  this.openWord = function(wrd) {
-    $scope.setWord(wrd, 'adjList');
-    $scope.setEng($scope.word.meanings[0], 'adjList');
-    ctrl.showWord = true;
-  };
-  this.closeWord = function() {
-    $scope.clearWord();
-    ctrl.showWord = false;
-  };
-  
-  this.searchFor = '';
-  this.findWord = function() {
-    ctrl.level = 0;
-    ctrl.displayList = [];
-    $scope.adjList.forEach(function(word){
-      if (hasStringValue(word, ctrl.searchFor)) {
-        ctrl.displayList.push(word);
-      }
-    });
-  };
-  
-  function hasStringValue(obj, str) {
-    var hasString = false;
-    obj.meanings.forEach(function(e){ (e.indexOf(str) > -1) ? hasString = true : null; });
-    if(obj.verb) {
-      if(obj.verb.indexOf(str) > -1 || obj.reading.indexOf(str) > -1) {hasString = true;}
-    } else if (obj.word) {
-      if(obj.word.indexOf(str) > -1 || obj.reading.indexOf(str) > -1) {hasString = true;}
-    }
-    return hasString;
-  }
-}]);
+
 app.controller('ConjugateController', function($scope) {
   var ctrl = this;
   
@@ -333,7 +228,7 @@ app.controller('ConjugateController', function($scope) {
   this.howMany = $scope.options.how_many[0];
   this.level = (localStorage.getItem('userInfo'))? JSON.parse(localStorage.getItem('userInfo')).level : 10;
   
-  this.list_options = [{display:'Verbs',sh:'verbsList'},{display:'Adjectives',sh:'adjList'}];
+  this.list_options = [{display:'Verbs',sh:'verbs'},{display:'Adjectives',sh:'adj'}];
   this.whichList = this.list_options[0];
   
   this.forms = {plain: true, polite: true};
@@ -445,60 +340,51 @@ app.controller('ConjugateController', function($scope) {
   this.response = new newResponse();
   
   this.openConj = function() {
-    ctrl.makeList();
-    ctrl.nextWord();
-    this.start = true;
+    ctrl.makeList(function() {
+      ctrl.nextWord();
+      if (ctrl.list && ctrl.list.length > 0)
+        ctrl.start = true;
+    });
   };
   this.submitAnswer = function() {
     ctrl.hideAnswer = false;
-  }
+  };
   this.nextWord = function() {
-    if (ctrl.list.length === 0) {
-      ctrl.makeList();
-    }
+    if (!ctrl.list || ctrl.list.length === 0)
+      ctrl.makeList(changeWord);
+    else
+      changeWord();
+  };
+  function changeWord() {
     ctrl.clearAnswers();
     ctrl.hideAnswer = true;
-    if(ctrl.whichList.sh==='verbsList') {
-      $scope.setWord(ctrl.list.pop().verb, ctrl.whichList.sh);
-    } else {
-      $scope.setWord(ctrl.list.pop().word, ctrl.whichList.sh);
-    }
+    $scope.setWord(ctrl.list.pop(), ctrl.whichList.sh);
     $scope.setEng($scope.word.meanings[0], ctrl.whichList.sh);
-  };
-  this.makeList = function(){
+  }
+  this.makeList = function(callback){
     if (localStorage.getItem('userInfo') && JSON.parse(localStorage.getItem('userInfo')).level === ctrl.level) {
       ctrl.list = JSON.parse(localStorage.getItem('userInfo'))[ctrl.whichList.sh];
+      if (ctrl.howMany.sh === 'one')
+        ctrl.list = ctrl.list.filter(function(word) {return word.level === ctrl.level;});
+      ctrl.list.shuffle();
+      if (callback) callback();
     } else {
-      ctrl.list = $scope[ctrl.whichList.sh].filter(function(w){return  w.level <= ctrl.level;});
+      if (!ctrl.level)
+        ctrl.level = 1;
+      var option = (ctrl.howMany.sh === 'one') ? 'level' : 'lte';
+      $scope.fetchData('/api/'+ctrl.whichList.sh+'?'+option+'='+ctrl.level, function(data) {
+        ctrl.list = data;
+        if (ctrl.list)
+          ctrl.list.shuffle();
+        if (callback) callback();
+      });
     }
-    if (ctrl.howMany.sh === 'one') {
-      ctrl.singleLevel();
-    }
-    if(ctrl.list.length === 0) {
-      alert('No words match your criteria.');
-      return false;
-    }
-    ctrl.list.shuffle();
-  };
-  this.singleLevel = function() {
-    ctrl.list = ctrl.list.filter(function(w){return  w.level === ctrl.level;});
   };
   this.clearAnswers = function() {
-    ctrl.response = (ctrl.whichList.sh === 'verbsList')? new newResponse() : new newAdjResponse() ;
-  };
-  
-  this.toHiragana = function(form, tense, direction) {
-    var str = ctrl.response[tense][form][direction];
-    var letters = str.match(/[a-zA-Z]+$/);
-    if (letters) {
-      letters = letters[0]
-      if (letters === 'n') { return; }
-      var translated = str.substring(0, str.indexOf(letters));
-      var to_translate = str.substring(str.indexOf(letters));
-      ctrl.response[tense][form][direction] = translated + wanakana.toHiragana(to_translate);
-    }
+    ctrl.response = (ctrl.whichList.sh === 'verbs')? new newResponse() : new newAdjResponse() ;
   };
 });
+
 app.controller('TranslateController', function($scope, filterFilter) {
   var ctrl = this;
   
@@ -510,7 +396,7 @@ app.controller('TranslateController', function($scope, filterFilter) {
   this.direction = '';
   this.form = '';
   
-  this.list_options = [{display:'Verbs',sh:'verbsList'},{display:'Adjectives',sh:'adjList'}];
+  this.list_options = [{display:'Verbs',sh:'verbs'},{display:'Adjectives',sh:'adj'}];
   this.whichList = this.list_options[0];
   
   this.response = '';
@@ -522,112 +408,122 @@ app.controller('TranslateController', function($scope, filterFilter) {
   this.level = (localStorage.getItem('userInfo'))? JSON.parse(localStorage.getItem('userInfo')).level : 10;
   
   this.openTran = function() {
-    ctrl.makeList();
-    ctrl.nextWord();
-    this.start = true;
+    ctrl.makeList(function() {
+      ctrl.nextWord();
+      if (ctrl.list && ctrl.list.length > 0)
+        ctrl.start = true;
+    });
   };
   this.submitAnswer = function() {
+    ctrl.correct = ctrl.responseInAnswers();
     ctrl.hideAnswer = false;
-    ctrl.possibleAnswers();
-  }
+  };
   this.nextWord = function() {
     if (!ctrl.forms.plain && !ctrl.forms.polite) {
+      ctrl.start = false;
       alert('You need to select plain and/or polite.');
       return;
     }
-    if (ctrl.whichList.sh==='verbsList'&&$scope.tenses.length === 0 ||
-        ctrl.whichList.sh==='adjList'&&$scope.adj_tenses.length===0) {
+    if (ctrl.whichList.sh==='verbs'&&$scope.tenses.length === 0 ||
+        ctrl.whichList.sh==='adj'&&$scope.adj_tenses.length===0) {
+      ctrl.start = false;
       alert('You need to select at least one tense.');
       return;
     }
     if (ctrl.list.length === 0) {
-      ctrl.makeList();
+      ctrl.makeList(changeWord);
+    } else {
+      changeWord();
     }
+  };
+  function changeWord() {
     ctrl.clearAnswers();
     ctrl.hideAnswer = true;
-    ctrl.tense = (ctrl.whichList.sh==='verbsList') ? $scope.tenses.random() : $scope.adj_tenses.random();
+    ctrl.tense = (ctrl.whichList.sh==='verbs') ? $scope.tenses.random() : $scope.adj_tenses.random();
     ctrl.direction = $scope.options.pos_neg.random();
     if (ctrl.tense.forms) {
       ctrl.form = ctrl.tense.forms.filter(function(form, i){
         if (ctrl.forms.plain && ctrl.forms.polite) {
           return true;
         } else if (ctrl.forms.plain) {
-          if (i === 0) {
-            return true;
-          }
+          if (i === 0) return true;
         } else {
-          if (i === 1) {
-            return true
-          }
+          if (i === 1) return true
         }
       }).random();
     } else {
       ctrl.form = '';
     }
-    (ctrl.whichList.sh === 'verbsList') ? $scope.setWord(ctrl.list.pop().verb, 'verbsList') : $scope.setWord(ctrl.list.pop().word, 'adjList');
+    $scope.setWord(ctrl.list.pop(), ctrl.whichList.sh);
     $scope.setEng($scope.word.meanings.random(), ctrl.whichList.sh);
-  };
-  this.makeList = function(){
+    ctrl.compileAnswers();
+  }
+  this.makeList = function(callback){
     if (localStorage.getItem('userInfo') && JSON.parse(localStorage.getItem('userInfo')).level === ctrl.level) {
       ctrl.list = JSON.parse(localStorage.getItem('userInfo'))[ctrl.whichList.sh];
+      if (ctrl.howMany.sh === 'one')
+        ctrl.list = ctrl.list.filter(function(word) {return word.level === ctrl.level;});
+      ctrl.list.shuffle();
+      if (callback) callback();
     } else {
-      ctrl.list = $scope[ctrl.whichList.sh].filter(function(w){return  w.level <= ctrl.level;});
+      if (!ctrl.level)
+        ctrl.level = 1;
+      var option = (ctrl.howMany.sh === 'one') ? 'level' : 'lte';
+      $scope.fetchData('/api/'+ctrl.whichList.sh+'?'+option+'='+ctrl.level, function(data) {
+        ctrl.list = data;
+        if (ctrl.list) ctrl.list.shuffle();
+        if (callback) callback();
+      });
     }
-    if (ctrl.howMany.sh === 'one') {
-      ctrl.singleLevel();
-    }
-    if(ctrl.list.length === 0) {
-      alert('No words match your criteria.');
-      return false;
-    }
-    ctrl.list.shuffle();
-  };
-  this.singleLevel = function() {
-    ctrl.list = ctrl.list.filter(function(w){return  w.level === ctrl.level;});
   };
   this.clearAnswers = function() {
     ctrl.response = '';
     ctrl.answers = [];
   };
-  this.possibleAnswers = function() {
+  this.compileAnswers = function() {
     var answers = [];
     if (ctrl.lang.sh === 'en') {
-      $scope[ctrl.whichList.sh].forEach(function(word){
-        if(word.meanings.indexOf($scope.eng.infinitive || $scope.eng) !== -1) {
-          var conjugations;
-          if (ctrl.whichList.sh==='verbsList') {
-            conjugations = $scope.getConjugations(word);
-            answers.push(conjugations[ctrl.tense.sh][ctrl.form][ctrl.direction]);
+      $scope.fetchData('/api/'+ctrl.whichList.sh+'/search/'+$scope.eng, function(data) {
+        data.forEach(function(word) {
+          if (ctrl.whichList.sh === 'verbs') {
+            answers.push($scope.verbConjugations(word)[ctrl.tense.sh][ctrl.form][ctrl.direction]);
           } else {
-            conjugations = ($scope.word.category === 'i-adjective') ? i_adj_conjugation(word) : na_adj_conjugation(word) ;
+            var conjugations = (word.category === 'i-adjective') ? i_adj_conjugation(word) : na_adj_conjugation(word)
             if (conjugations[ctrl.tense.sh][ctrl.form]) {
               answers.push(conjugations[ctrl.tense.sh][ctrl.form][ctrl.direction]);
             } else {
               answers.push(conjugations[ctrl.tense.sh]);
             }
           }
-        }
+        });
+        ctrl.answers = answers;
       });
     } else {
       $scope.word.meanings.forEach(function(meaning){
-        if(ctrl.whichList.sh === 'verbsList') {
-          var engVerbs = $scope.engList.filter(function(verb){return verb.infinitive === meaning});
-          if (engVerbs.length > 0) {
-            var conj = $scope.getEngConjugations(engVerbs[0]);
+        var conj;
+        if(ctrl.whichList.sh === 'verbs') {
+          $scope.fetchData('/api/en_verbs/'+meaning, function(data) {
+            conj = eng_conjugation(data[0]);
             conj[ctrl.tense.sh][ctrl.direction].forEach(function(ans){ answers.push(ans); });
-          }
+            ctrl.answers = answers;
+            ctrl.correct = ctrl.responseInAnswers();
+          });
+          // var engVerbs = $scope.engList.filter(function(verb){return verb.infinitive === meaning});
+          // if (engVerbs.length > 0) {
+          //   var conj = $scope.getEngConjugations(engVerbs[0]);
+          //   conj[ctrl.tense.sh][ctrl.direction].forEach(function(ans){ answers.push(ans); });
+          // }
         } else {
-          var conj = eng_adj_conjugation(meaning);
+          conj = eng_adj_conjugation(meaning);
           if (conj[ctrl.tense.sh][ctrl.direction]) {
             conj[ctrl.tense.sh][ctrl.direction].forEach(function(ans){ answers.push(ans); });
           } else {
             conj[ctrl.tense.sh].forEach(function(ans){ answers.push(ans); });
           }
+          ctrl.answers = answers;
         }
       });
     }
-    ctrl.answers = answers;
-    ctrl.correct = ctrl.responseInAnswers();
   };
   this.responseInAnswers = function() {
     var correct = false;
@@ -643,18 +539,6 @@ app.controller('TranslateController', function($scope, filterFilter) {
       }
     });
     return correct;
-  };
-  
-  this.toHiragana = function() {
-    var str = ctrl.response
-    var letters = str.match(/[a-zA-Z]+$/);
-    if (letters) {
-      letters = letters[0]
-      if (letters === 'n') { return; }
-      var translated = str.substring(0, str.indexOf(letters));
-      var to_translate = str.substring(str.indexOf(letters));
-      ctrl.response = translated + wanakana.toHiragana(to_translate);
-    }
   };
 });
 

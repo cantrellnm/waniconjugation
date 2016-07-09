@@ -1,3 +1,4 @@
+var https = require('https');
 var mongoose = require('mongoose');
 var verbs = mongoose.model('Verb');
 var en_verbs = mongoose.model('En_verb');
@@ -123,6 +124,53 @@ module.exports.adjList = function(req, res) {
       sendJSONresponse(res, 200, docs);
   });
 };
+
+module.exports.userInfo = function(req, res) {
+  https.get({
+      hostname: 'www.wanikani.com',
+      path: '/api/user/'+req.params.key+'/vocabulary',
+      headers: {
+        'Content-Type': 'application/json',
+        'Accept': 'application/json'
+    }}, (response) => {
+      var data = '';
+      response.setEncoding('utf8');
+      response.on('data', (chunk) => {
+        data += chunk;
+      });
+      response.on('end', () => {
+        if (data) {
+          data = JSON.parse(data);
+          parseUserData(res, data, req.params.key);
+        } else {
+          sendJSONresponse(res, 500, 'error requesting data from WaniKani');
+        }
+      });
+    });
+};
+
+function parseUserData(res, data, key) {
+  var info = {
+    username: data.user_information.username,
+    level: data.user_information.level,
+    APIkey: key
+  };
+  verbs.find({ level: {$lte: info.level} }).exec((err, docs) => {
+    if (err) sendJSONresponse(res, 500, 'error fetching verb data');
+    info.verbs = docs.filter((doc) => {
+      var matching = data.requested_information.general.filter((word) => { return word.character === doc.verb; });
+      return (matching[0] && matching[0].user_specific);
+    });
+    adj.find({ level: {$lte: info.level} }).exec((err, docs) => {
+      if (err) sendJSONresponse(res, 500, 'error fetching adj data');
+      info.adj = docs.filter((doc) => {
+        var matching = data.requested_information.general.filter((word) => { return word.character === doc.word; });
+        return (matching[0] && matching[0].user_specific);
+      });
+      sendJSONresponse(res, 200, info);
+    });
+  });
+}
 
 function sendJSONresponse(res, status, content) {
   res.status(status);
