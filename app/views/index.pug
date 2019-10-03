@@ -3,11 +3,11 @@ extends layout
 block content
   .text-center
     button.btn(ng-hide='getKey', ng-click='toggleGetKey()') {{(username) ? 'Change WaniKani API Key' : 'Add WaniKani API Key'}}
-    |  
+    |
     a(ng-show='getKey', ng-click='removeUser()') Delete User Info
-    |  
+    |
     input.input-lg(ng-show='getKey', type='text', ng-keyup='($event.keyCode===13)?updateUser():null', style='width:32em;', placeholder='WaniKani User API Key', ng-model='APIkey')
-    |  
+    |
     button.btn(ng-show='getKey', ng-click='updateUser()') Submit
   .panel
     .panel-heading
@@ -15,12 +15,12 @@ block content
       h2.text-right(ng-show='username') Hi, {{username}}!
     .panel-body
       p
-        | Welcome to &apos;WaniConjugation&apos;, a site for Japanese language learners to practice conjugating verbs and adjectives. This collection of 955 verbs and 580 adjectives, their meanings, and their &apos;levels&apos; originates from the Great Crabigator over at 
+        | Welcome to &apos;WaniConjugation&apos;, a site for Japanese language learners to practice conjugating verbs and adjectives. This collection of 955 verbs and 580 adjectives, their meanings, and their &apos;levels&apos; originates from the Great Crabigator over at
         a(href='https://www.wanikani.com') WaniKani
         | . As such, this tool is optimized for users of that site. If you&apos;re not already a member and are trying to learn Japanese kanji, what are you waiting for? Go sign up!
       p
         | All conjugations and English translations have been generated via script I wrote. Please let me know if you spot any errors so that I can fix them.
       p
-        | You can report errors to 
-        a(href='mailto:waniconjugation@gmail.com?Subject=WaniConjugation%20Error%20Report') waniconjugation@gmail.com
-        | .
+        | If you run into problems, you can open an issue 
+        a(href='https://github.com/cantrellnm/waniconjugation/issues') on GitHub
+        | . (Account needed.) Pull requests welcome.
