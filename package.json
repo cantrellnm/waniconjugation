@@ -1,13 +1,23 @@
 {
   "name": "waniconjugation",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Practice conjugating and translating Japanese verbs and adjectives.",
   "main": "server.js",
   "repository": "",
   "author": "cantrellnm <cantrellnm@gmail.com>",
+  "scripts": {
+    "build": "gulp dbimport",
+    "start": "node server.js",
+    "dev": "nodemon server.js"
+  },
   "dependencies": {
     "express": "^4.14.0",
+    "gulp": "^4.0.2",
+    "gulp-mongodb-data": "^3.0.1",
     "mongoose": "^4.5.3",
     "pug": "^2.0.0-beta3"
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.3"
   }
 }

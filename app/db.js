@@ -1,5 +1,5 @@
-var mongoose = require('mongoose'),
-    dbURI = process.env.DB_URI;
+const mongoose = require('mongoose'),
+    dbURI = process.env.DB_URI || 'mongodb://localhost:27017/waniconjugation';
 
 mongoose.connect(dbURI);
 mongoose.connection.on('connected', function () {
@@ -10,7 +10,7 @@ mongoose.connection.on('error',function (err) {
 });
 mongoose.connection.on('disconnected', function () {
  console.log('Mongoose disconnected');
-}); 
+});
 
 var gracefulShutdown = function (msg, callback) {
   mongoose.connection.close(function () {

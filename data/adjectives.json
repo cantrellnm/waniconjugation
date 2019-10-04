@@ -1,0 +1,580 @@
+{"_id":{"$oid":"5779b72962e9dc855db12dc5"},"word":"悪い","reading":"わるい","level":12.0,"meanings":["bad","substandard"],"category":"i-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12dc6"},"word":"永久","reading":"えいきゅう","meanings":["forever","eternal"],"level":32.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12dc7"},"word":"乏しい","reading":"とぼしい","level":30.0,"meanings":["scarce","meager"],"category":"i-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12dc8"},"word":"真剣","reading":"しんけん","meanings":["serious"],"level":35.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12dc9"},"word":"不便","reading":"ふべん","meanings":["inconvenient"],"level":11.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12dca"},"word":"本当","reading":"ほんとう","meanings":["real","true"],"level":5.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12dcb"},"word":"愉快","reading":"ゆかい","meanings":["pleasant","happy"],"level":55.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12dcc"},"word":"悠長","reading":"ゆうちょう","meanings":["leisurely","slow","deliberate","easygoing"],"level":54.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12dcd"},"word":"不機嫌","reading":"ふきげん","meanings":["displeased","ill humored","ill humoured","sullen"],"level":22.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12dce"},"word":"華々しい","reading":"はなばなしい","level":33.0,"meanings":["gorgeous","flamboyant","brilliant","remarkable"],"category":"i-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12dcf"},"word":"荘厳","reading":"そうごん","meanings":["solemn","grave"],"level":54.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12dd0"},"word":"怪しい","reading":"あやしい","level":26.0,"meanings":["suspicious","shady"],"category":"i-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12dd1"},"word":"一本気","reading":"いっぽんぎ","meanings":["single-minded"],"level":4.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12dd2"},"word":"細い","reading":"ほそい","level":17.0,"meanings":["thin","slender"],"category":"i-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12dd3"},"word":"寡黙","reading":"かもく","meanings":["silent","shy"],"level":60.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12dd4"},"word":"不自由","reading":"ふじゆう","meanings":["discomforted","inconvenienced","disabled","impaired","impoverished","destitute"],"level":9.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12dd5"},"word":"冷たい","reading":"つめたい","level":28.0,"meanings":["cold","cool","cold to the touch"],"category":"i-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12dd6"},"word":"固い","reading":"かたい","level":14.0,"meanings":["hard"],"category":"i-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12dd7"},"word":"親しい","reading":"したしい","level":10.0,"meanings":["intimate","friendly"],"category":"i-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12dd8"},"word":"複雑","reading":"ふくざつ","meanings":["complicated","complex"],"level":32.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12dd9"},"word":"優しい","reading":"やさしい","level":23.0,"meanings":["gentle","kind","warm hearted","nice"],"category":"i-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12dda"},"word":"忌まわしい","reading":"いまわしい","level":58.0,"meanings":["unpleasant","disgusting","inauspicious","ominous"],"category":"i-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12ddb"},"word":"独特","reading":"どくとく","meanings":["unique"],"level":26.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12ddc"},"word":"粗野","reading":"そや","meanings":["rustic","rough","rude","vulgar"],"level":55.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12ddd"},"word":"煩い","reading":"うるさい","level":60.0,"meanings":["noisy","loud","annoying"],"category":"i-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12dde"},"word":"懇意","reading":"こんい","meanings":["kind","intimate"],"level":43.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12ddf"},"word":"不吉","reading":"ふきつ","meanings":["ominous","sinister","inauspicious","ill omened"],"level":44.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12de0"},"word":"粘々","reading":"ねばねば","meanings":["sticky"],"level":47.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12de1"},"word":"仕方がない","reading":"しかたがない","level":6.0,"meanings":["unavoidable","inevitable"],"category":"i-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12de2"},"word":"賢明","reading":"けんめい","meanings":["wise","intelligent"],"level":48.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12de3"},"word":"遅い","reading":"おそい","level":37.0,"meanings":["slow","late"],"category":"i-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12de4"},"word":"白い","reading":"しろい","level":4.0,"meanings":["white"],"category":"i-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12de5"},"word":"感慨深い","reading":"かんがいぶかい","level":60.0,"meanings":["deeply moving","deeply emotive"],"category":"i-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12de6"},"word":"当たり前","reading":"あたりまえ","meanings":["natural","reasonable","obvious","usual","common","ordinary"],"level":8.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12de7"},"word":"疎か","reading":"おろか, おろそか","meanings":["neglectful","negligent","careless"],"level":56.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12de8"},"word":"寒い","reading":"さむい","level":12.0,"meanings":["cold"],"category":"i-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12de9"},"word":"盲目","reading":"もうもく","meanings":["blind"],"level":57.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12dea"},"word":"損","reading":"そん","meanings":["disadvantaged","handicapped","lost"],"level":34.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12deb"},"word":"悠久","reading":"ゆうきゅう","meanings":["eternal","perpetual","permanent"],"level":54.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12dec"},"word":"色々","reading":"いろいろ","meanings":["varied"],"level":5.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12ded"},"word":"不人気","reading":"ふにんき","meanings":["unpopular"],"level":7.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12dee"},"word":"冷静","reading":"れいせい","meanings":["cool headed"],"level":28.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12def"},"word":"残念","reading":"ざんねん","meanings":["unfortunate"],"level":14.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12df0"},"word":"安心","reading":"あんしん","meanings":["relieved","secure in mind"],"level":6.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12df1"},"word":"任意","reading":"にんい","meanings":["optional","voluntary"],"level":21.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12df2"},"word":"不器用","reading":"ぶきよう","meanings":["clumsy","unskillful"],"level":15.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12df3"},"word":"不味い","reading":"まずい","level":17.0,"meanings":["bad tasting","unappetizing","unskillful"],"category":"i-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12df4"},"word":"果敢","reading":"かかん","meanings":["resolute","determined","bold"],"level":57.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12df5"},"word":"新鮮","reading":"しんせん","meanings":["fresh"],"level":25.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12df6"},"word":"忠実","reading":"ちゅうじつ","meanings":["faithful","devoted","loyal"],"level":33.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12df7"},"word":"粗い","reading":"あらい","level":55.0,"meanings":["coarse","rough"],"category":"i-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12df8"},"word":"迷惑","reading":"めいわく","meanings":["troublesome","annoying","inconvenient"],"level":27.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12df9"},"word":"聡い","reading":"さとい","level":51.0,"meanings":["smart","sensitive","discerning"],"category":"i-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12dfa"},"word":"凛々しい","reading":"りりしい","level":56.0,"meanings":["gallant","manly","distinguished","noble"],"category":"i-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12dfb"},"word":"疎ら","reading":"まばら","meanings":["sparse","thin","scattered","straggling","sporadic"],"level":54.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12dfc"},"word":"悲しい","reading":"かなしい","level":12.0,"meanings":["sad"],"category":"i-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12dfd"},"word":"過剰","reading":"かじょう","meanings":["excessive"],"level":53.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12dfe"},"word":"上品","reading":"じょうひん","meanings":["elegant"],"level":18.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12dff"},"word":"妙","reading":"みょう","meanings":["odd","unusual","strange"],"level":28.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12e00"},"word":"苦い","reading":"にがい","level":9.0,"meanings":["bitter tasting","bitter"],"category":"i-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12e01"},"word":"豪華","reading":"ごうか","meanings":["luxurious","splendid"],"level":31.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12e02"},"word":"鈍感","reading":"どんかん","meanings":["thickheaded","insensitive"],"level":46.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12e03"},"word":"激しい","reading":"はげしい","level":26.0,"meanings":["fierce","violent","intense"],"category":"i-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12e04"},"word":"陳腐","reading":"ちんぷ","meanings":["cliched","stale","hackneyed"],"level":52.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12e05"},"word":"罪","reading":"つみ","meanings":["sinful","criminal"],"level":20.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12e06"},"word":"官僚的","reading":"かんりょうてき","meanings":["bureaucratic"],"level":30.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12e07"},"word":"静粛","reading":"せいしゅく","meanings":["silent"],"level":54.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12e08"},"word":"嫌","reading":"いや","meanings":["disagreeable","detestable","unpleasant","reluctant"],"level":20.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12e09"},"word":"最低","reading":"さいてい","meanings":["lowest","worst","disgusting","horrible","nasty","terrible"],"level":11.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12e0a"},"word":"手堅い","reading":"てがたい","level":44.0,"meanings":["solid","steady","firm"],"category":"i-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12e0b"},"word":"真っ黒","reading":"まっくろ","meanings":["pitch black","pure black"],"level":16.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12e0c"},"word":"美味しい","reading":"おいしい","level":15.0,"meanings":["tasty","good tasting","delicious"],"category":"i-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12e0d"},"word":"夢中","reading":"むちゅう","meanings":["engrossed","delirious","crazy about","absorbed","dazed"],"level":20.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12e0e"},"word":"忙しい","reading":"いそがしい","level":19.0,"meanings":["busy"],"category":"i-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12e0f"},"word":"無力","reading":"むりょく","meanings":["powerless","helpless"],"level":17.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12e10"},"word":"大幅","reading":"おおはば","meanings":["big","large","drastic","substantial","major"],"level":36.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12e11"},"word":"親不孝","reading":"おやふこう","meanings":["lacking in filial piety","disobedient to parents"],"level":42.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12e12"},"word":"克明","reading":"こくめい","meanings":["detailed"],"level":42.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12e13"},"word":"暴虐","reading":"ぼうぎゃく","meanings":["tyrannical","outrageous","atrocious","cruel"],"level":53.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12e14"},"word":"不可分","reading":"ふかぶん","meanings":["indivisible"],"level":20.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12e15"},"word":"不穏","reading":"ふおん","meanings":["restless","improper","turbulent"],"level":46.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12e16"},"word":"好き","reading":"すき","meanings":["liked","loved"],"level":11.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12e17"},"word":"倹約","reading":"けんやく","meanings":["thrifty","economical","frugal"],"level":60.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12e18"},"word":"理不尽","reading":"りふじん","meanings":["unreasonable","irrational"],"level":48.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12e19"},"word":"比較的","reading":"ひかくてき","meanings":["comparative","relative"],"level":28.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12e1a"},"word":"伊達","reading":"だて","meanings":["elegant","sophisticated"],"level":47.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12e1b"},"word":"大規模","reading":"だいきぼ","meanings":["large in scale"],"level":27.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12e1c"},"word":"高等","reading":"こうとう","meanings":["high class","high grade"],"level":18.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12e1d"},"word":"不法","reading":"ふほう","meanings":["illegal","unlawful"],"level":15.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12e1e"},"word":"器用","reading":"きよう","meanings":["dextrous","skillful","dexterous"],"level":13.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12e1f"},"word":"得","reading":"とく","meanings":["beneficial","profitable","advantageous","gainful"],"level":19.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12e20"},"word":"不詳","reading":"ふしょう","meanings":["unknown"],"level":30.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12e21"},"word":"光栄","reading":"こうえい","meanings":["honorable","privileged"],"level":17.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12e22"},"word":"乙","reading":"おつ","meanings":["second","party to an agreement"],"level":57.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12e23"},"word":"自動的","reading":"じどうてき","meanings":["automatic"],"level":16.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12e24"},"word":"虚しい","reading":"むなしい","level":17.0,"meanings":["empty","vacant","futile","vain"],"category":"i-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12e25"},"word":"必要","reading":"ひつよう","meanings":["necessary","needed","essential"],"level":9.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12e26"},"word":"閑散","reading":"かんさん","meanings":["deserted","inactive","leisurely","quiet"],"level":59.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12e27"},"word":"容易","reading":"ようい","meanings":["easy","simple"],"level":19.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12e28"},"word":"悪賢い","reading":"わるがしこい","level":50.0,"meanings":["devious","cunning","crafty","wily"],"category":"i-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12e29"},"word":"得意","reading":"とくい","meanings":["good at","skilled at","specialty"],"level":19.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12e2a"},"word":"華やか","reading":"はなやか","meanings":["showy"],"level":31.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12e2b"},"word":"壮大","reading":"そうだい","meanings":["magnificent","grand","epic"],"level":50.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12e2c"},"word":"日本的","reading":"にほんてき","meanings":["very japanese","typically japanese"],"level":14.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12e2d"},"word":"素敵","reading":"すてき","meanings":["lovely","dreamy","beautiful"],"level":21.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12e2e"},"word":"富裕","reading":"ふゆう","meanings":["wealthy","affluent"],"level":31.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12e2f"},"word":"不正","reading":"ふせい","meanings":["injust","unfair"],"level":4.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12e30"},"word":"幸運","reading":"こううん","meanings":["lucky","fortunate"],"level":16.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12e31"},"word":"効果的","reading":"こうかてき","meanings":["effective"],"level":27.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12e32"},"word":"下手","reading":"へた","meanings":["unskillful","unskilled","bad at","not good at"],"level":2.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12e33"},"word":"古い","reading":"ふるい","level":3.0,"meanings":["old"],"category":"i-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12e34"},"word":"一般的","reading":"いっぱんてき","meanings":["ordinary","normal","common"],"level":38.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12e35"},"word":"良質","reading":"りょうしつ","meanings":["good quality","high quality","superior quality"],"level":24.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12e36"},"word":"粋","reading":"いき","meanings":["stylish"],"level":34.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12e37"},"word":"多額","reading":"たがく","meanings":["large amount","large sum"],"level":24.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12e38"},"word":"明朗","reading":"めいろう","meanings":["bright","cheerful","clear"],"level":43.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12e39"},"word":"有毒","reading":"ゆうどく","meanings":["poisonous","toxic"],"level":15.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12e3a"},"word":"最高","reading":"さいこう","meanings":["best","supreme","most"],"level":10.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12e3b"},"word":"孝行","reading":"こうこう","meanings":["pious to family","respectful of parents"],"level":40.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12e3c"},"word":"幸い","reading":"さいわい","meanings":["happy","lucky","fortunate"],"level":18.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12e3d"},"word":"悲惨","reading":"ひさん","meanings":["disastrous","tragic","miserable","wretched","pitiful"],"level":53.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12e3e"},"word":"必至","reading":"ひっし","meanings":["inevitable","necessary","foregone"],"level":41.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12e3f"},"word":"黒い","reading":"くろい","level":7.0,"meanings":["black"],"category":"i-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12e40"},"word":"紛れもない","reading":"まぎれもない","level":46.0,"meanings":["certain","unmistaken","obvious"],"category":"i-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12e41"},"word":"可也","reading":"かなり","meanings":["considerably","fairly","quite"],"level":45.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12e42"},"word":"緩い","reading":"ゆるい","level":38.0,"meanings":["loose"],"category":"i-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12e43"},"word":"勇敢","reading":"ゆうかん","meanings":["brave","heroic","gallant"],"level":57.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12e44"},"word":"狭い","reading":"せまい","level":24.0,"meanings":["narrow"],"category":"i-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12e45"},"word":"瑞々しい","reading":"みずみずしい","level":58.0,"meanings":["fresh","young","juicy","lively","vibrant"],"category":"i-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12e46"},"word":"煩雑","reading":"はんざつ","meanings":["complex","intricate","complicated"],"level":60.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12e47"},"word":"安い","reading":"やすい","level":6.0,"meanings":["cheap","inexpensive"],"category":"i-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12e48"},"word":"鋭敏","reading":"えいびん","meanings":["sharp","quick witted","keen"],"level":40.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12e49"},"word":"不等","reading":"ふとう","meanings":["inequal"],"level":18.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12e4a"},"word":"欲しい","reading":"ほしい","level":32.0,"meanings":["wanted","desired"],"category":"i-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12e4b"},"word":"快適","reading":"かいてき","meanings":["pleasant","agreeable","comfortable"],"level":30.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12e4c"},"word":"不潔","reading":"ふけつ","meanings":["filthy","dirty"],"level":28.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12e4d"},"word":"野暮","reading":"やぼ","meanings":["unrefined","rustic","stupid"],"level":33.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12e4e"},"word":"綺麗","reading":"きれい","meanings":["pretty","beautiful","clean"],"level":29.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12e4f"},"word":"朗らか","reading":"ほがらか","meanings":["bright","cheerful"],"level":43.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12e50"},"word":"鮮やか","reading":"あざやか","meanings":["vivid","splendid"],"level":25.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12e51"},"word":"便利","reading":"べんり","meanings":["convenient","handy"],"level":11.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12e52"},"word":"不健康","reading":"ふけんこう","meanings":["unhealthy","not healthy"],"level":29.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12e53"},"word":"劣悪","reading":"れつあく","meanings":["inferior","coarse"],"level":49.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12e54"},"word":"幼稚","reading":"ようち","meanings":["childish","immature"],"level":28.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12e55"},"word":"寛容","reading":"かんよう","meanings":["tolerant","open minded","forbearing","generous"],"level":53.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12e56"},"word":"有益","reading":"ゆうえき","meanings":["beneficial"],"level":28.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12e57"},"word":"不思議","reading":"ふしぎ","meanings":["wonderful","mysterious","marvelous"],"level":20.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12e58"},"word":"人気","reading":"にんき","meanings":["popular"],"level":4.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12e59"},"word":"柔軟","reading":"じゅうなん","meanings":["flexible","pliable"],"level":51.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12e5a"},"word":"不可欠","reading":"ふかけつ","meanings":["indispensable","essential"],"level":18.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12e5b"},"word":"温暖","reading":"おんだん","meanings":["warm","mild"],"level":32.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12e5c"},"word":"卑屈","reading":"ひくつ","meanings":["menial","subservient","abject"],"level":59.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12e5d"},"word":"大人しい","reading":"おとなしい","level":3.0,"meanings":["obedient","docile","quiet"],"category":"i-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12e5e"},"word":"奔放","reading":"ほんぽう","meanings":["wild","uninhibited","extravagant","rampant"],"level":58.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12e5f"},"word":"裕福","reading":"ゆうふく","meanings":["wealthy"],"level":20.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12e60"},"word":"無駄","reading":"むだ","meanings":["futile","useless","pointless"],"level":50.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12e61"},"word":"本気","reading":"ほんき","meanings":["serious"],"level":4.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12e62"},"word":"貴い","reading":"とうとい","level":34.0,"meanings":["valuable","sacred"],"category":"i-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12e63"},"word":"律動的","reading":"りつどうてき","meanings":["rhythmic"],"level":25.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12e64"},"word":"明瞭","reading":"めいりょう","meanings":["clear"],"level":47.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12e65"},"word":"閑静","reading":"かんせい","meanings":["quiet"],"level":59.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12e66"},"word":"珍しい","reading":"めずらしい","level":43.0,"meanings":["rare","unusual","curious"],"category":"i-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12e67"},"word":"若い","reading":"わかい","level":19.0,"meanings":["young"],"category":"i-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12e68"},"word":"淡い","reading":"あわい","level":49.0,"meanings":["faint","pale"],"category":"i-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12e69"},"word":"一般","reading":"いっぱん","meanings":["general","common"],"level":36.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12e6a"},"word":"醜悪","reading":"しゅうあく","meanings":["ugly","mean","offensive"],"level":60.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12e6b"},"word":"当然","reading":"とうぜん","meanings":["natural","obvious"],"level":13.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12e6c"},"word":"厳しい","reading":"きびしい","level":32.0,"meanings":["strict"],"category":"i-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12e6d"},"word":"未熟","reading":"みじゅく","meanings":["not yet good at","not good at"],"level":33.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12e6e"},"word":"特別","reading":"とくべつ","meanings":["special"],"level":11.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12e6f"},"word":"怠い","reading":"だるい","level":56.0,"meanings":["sluggish","heavy feeling","languid","dull"],"category":"i-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12e70"},"word":"遺憾","reading":"いかん","meanings":["regrettable","unsatisfactory"],"level":55.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12e71"},"word":"創造的","reading":"そうぞうてき","meanings":["creative"],"level":28.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12e72"},"word":"親孝行","reading":"おやこうこう","meanings":["pious toward family"],"level":42.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12e73"},"word":"詳しい","reading":"くわしい","level":30.0,"meanings":["detailed","expert"],"category":"i-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12e74"},"word":"薄い","reading":"うすい","level":40.0,"meanings":["diluted","thin","weak"],"category":"i-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12e75"},"word":"いい加減","reading":"いいかげん","meanings":["pointless","unfounded","irresponsible","careless"],"level":19.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12e76"},"word":"鈍い","reading":"にぶい, のろい","level":46.0,"meanings":["dull"],"category":"i-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12e77"},"word":"逆","reading":"ぎゃく","meanings":["reversed","opposite"],"level":28.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12e78"},"word":"著しい","reading":"いちじるしい","level":33.0,"meanings":["remarkable","marked"],"category":"i-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12e79"},"word":"煩忙","reading":"はんぼう","meanings":["busy","busy from pressure"],"level":60.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12e7a"},"word":"厚い","reading":"あつい","level":20.0,"meanings":["thick"],"category":"i-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12e7b"},"word":"単純","reading":"たんじゅん","meanings":["simple"],"level":34.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12e7c"},"word":"不況","reading":"ふきょう","meanings":["recessed","depressed","slumped"],"level":25.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12e7d"},"word":"無縁","reading":"むえん","meanings":["unrelated"],"level":44.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12e7e"},"word":"聡明","reading":"そうめい","meanings":["wisdom","sagacity"],"level":51.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12e7f"},"word":"廉価","reading":"れんか","meanings":["low priced","cheap"],"level":60.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12e80"},"word":"有意","reading":"ゆうい","meanings":["significant"],"level":35.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12e81"},"word":"面倒臭い","reading":"めんどうくさい","level":22.0,"meanings":["troublesome","bothersome"],"category":"i-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12e82"},"word":"暑い","reading":"あつい","level":12.0,"meanings":["hot","hot in temperature","warm"],"category":"i-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12e83"},"word":"超自然的","reading":"ちょうしぜんてき","meanings":["supernatural"],"level":36.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12e84"},"word":"幸福","reading":"こうふく","meanings":["happy"],"level":16.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12e85"},"word":"最深","reading":"さいしん","meanings":["deepest"],"level":12.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12e86"},"word":"心配","reading":"しんぱい","meanings":["concerning","worrisome"],"level":10.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12e87"},"word":"最悪","reading":"さいあく","meanings":["worst"],"level":12.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12e88"},"word":"眠い","reading":"ねむい","level":27.0,"meanings":["sleepy"],"category":"i-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12e89"},"word":"寂しい","reading":"さびしい, さみしい","level":56.0,"meanings":["lonely","lonesome","solitary","desolate"],"category":"i-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12e8a"},"word":"正しい","reading":"ただしい","level":2.0,"meanings":["correct","true"],"category":"i-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12e8b"},"word":"秀逸","reading":"しゅういつ","meanings":["excellent"],"level":54.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12e8c"},"word":"元気","reading":"げんき","meanings":["energetic","spirited","healthy"],"level":4.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12e8d"},"word":"清潔","reading":"せいけつ","meanings":["pure","clean"],"level":28.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12e8e"},"word":"倫理的","reading":"りんりてき","meanings":["ethical"],"level":54.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12e8f"},"word":"奇妙","reading":"きみょう","meanings":["strange","curious","odd"],"level":29.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12e90"},"word":"貧しい","reading":"まずしい","level":30.0,"meanings":["poor"],"category":"i-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12e91"},"word":"煙い","reading":"けむい","level":20.0,"meanings":["smoky"],"category":"i-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12e92"},"word":"有名","reading":"ゆうめい","meanings":["famous"],"level":6.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12e93"},"word":"辛い","reading":"からい, つらい","level":44.0,"meanings":["spicy","hot","difficult","painful"],"category":"i-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12e94"},"word":"保守的","reading":"ほしゅてき","meanings":["conservative"],"level":16.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12e95"},"word":"熱い","reading":"あつい","level":13.0,"meanings":["hot to touch","passionate","fired up"],"category":"i-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12e96"},"word":"反対","reading":"はんたい","meanings":["opposite","resistant","hostile"],"level":8.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12e97"},"word":"頻繁","reading":"ひんぱん","meanings":["incessant","frequent"],"level":40.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12e98"},"word":"凡庸","reading":"ぼんよう","meanings":["mediocre","banal","common"],"level":56.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12e99"},"word":"手頃","reading":"てごろ","meanings":["moderate","handy","convenient","reasonable"],"level":45.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12e9a"},"word":"完全","reading":"かんぜん","meanings":["complete","perfect"],"level":14.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12e9b"},"word":"低い","reading":"ひくい","level":11.0,"meanings":["low","short"],"category":"i-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12e9c"},"word":"窮屈","reading":"きゅうくつ","meanings":["tight","narrow","stiff","rigid"],"level":56.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12e9d"},"word":"匠","reading":"たくみ","meanings":["artisan"],"level":56.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12e9e"},"word":"楽","reading":"らく","meanings":["comfortable","pleasurable"],"level":8.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12e9f"},"word":"緩やか","reading":"ゆるやか","meanings":["loose","mild","gentle"],"level":38.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12ea0"},"word":"細かい","reading":"こまかい","level":19.0,"meanings":["detailed","small","fine","trivial"],"category":"i-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12ea1"},"word":"致命的","reading":"ちめいてき","meanings":["fatal"],"level":38.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12ea2"},"word":"涼しい","reading":"すずしい","level":46.0,"meanings":["cool","refreshing"],"category":"i-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12ea3"},"word":"平穏","reading":"へいおん","meanings":["calm","tranquil"],"level":46.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12ea4"},"word":"荒い","reading":"あらい","level":42.0,"meanings":["wild","rough"],"category":"i-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12ea5"},"word":"深刻","reading":"しんこく","meanings":["serious","grave"],"level":34.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12ea6"},"word":"隆盛","reading":"りゅうせい","meanings":["prosperous"],"level":39.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12ea7"},"word":"平安","reading":"へいあん","meanings":["peaceful","tranquil"],"level":6.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12ea8"},"word":"巧妙","reading":"こうみょう","meanings":["ingenious","skillful"],"level":50.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12ea9"},"word":"不明瞭","reading":"ふめいりょう","meanings":["dim","obscure","unclear","unintelligible"],"level":49.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12eaa"},"word":"丈夫","reading":"じょうぶ","meanings":["sturdy","firm"],"level":15.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12eab"},"word":"密か","reading":"ひそか","meanings":["secret","private"],"level":32.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12eac"},"word":"海溝","reading":"かいこう","meanings":["deep"],"level":45.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12ead"},"word":"馬鹿馬鹿しい","reading":"ば���ばかしい","level":38.0,"meanings":["absurd","ridiculous","silly"],"category":"i-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12eae"},"word":"寝不足","reading":"ねぶそく","meanings":["lacking in sleep","sleep-deprived"],"level":22.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12eaf"},"word":"苦しい","reading":"くるしい","level":9.0,"meanings":["painful","agonizing"],"category":"i-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12eb0"},"word":"奥深い","reading":"おくぶかい, おくふかい","level":38.0,"meanings":["profound","deep"],"category":"i-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12eb1"},"word":"顕著","reading":"けんちょ","meanings":["remarkable","striking","obvious"],"level":54.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12eb2"},"word":"直接的","reading":"ちょくせつてき","meanings":["direct"],"level":28.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12eb3"},"word":"凶悪","reading":"きょうあく","meanings":["atrocious","fiendish"],"level":45.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12eb4"},"word":"唐突","reading":"とうとつ","meanings":["sudden","unexpected"],"level":50.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12eb5"},"word":"名誉","reading":"めいよ","meanings":["honored","prestigous","honoured"],"level":40.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12eb6"},"word":"穏やか","reading":"おだやか","meanings":["calm","mild"],"level":46.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12eb7"},"word":"清涼","reading":"せいりょう","meanings":["cool","refreshing"],"level":46.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12eb8"},"word":"急","reading":"きゅう","meanings":["urgent","sudden","abrupt"],"level":16.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12eb9"},"word":"惨め","reading":"みじめ","meanings":["miserable","wretched","unhappy","sad"],"level":53.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12eba"},"word":"困難","reading":"こんなん","meanings":["hard","difficul"],"level":20.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12ebb"},"word":"悔しい","reading":"くやしい","level":48.0,"meanings":["regrettable","vexing","annoying"],"category":"i-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12ebc"},"word":"派手","reading":"はで","meanings":["showy","flashy","gaudy"],"level":21.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12ebd"},"word":"怠惰","reading":"たいだ","meanings":["lazy","idle","slothful"],"level":52.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12ebe"},"word":"遥か","reading":"はるか","meanings":["far away","distant","far off"],"level":56.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12ebf"},"word":"逆さま","reading":"さかさま","meanings":["upside down"],"level":30.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12ec0"},"word":"一杯","reading":"いっぱい","meanings":["cupful","full"],"level":29.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12ec1"},"word":"詳細","reading":"しょうさい","meanings":["detailed"],"level":30.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12ec2"},"word":"危険","reading":"きけん","meanings":["risky","unsafe","dangerous","perilous","hazardous"],"level":16.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12ec3"},"word":"豊満","reading":"ほうまん","meanings":["plump","full figured"],"level":25.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12ec4"},"word":"一生懸命","reading":"いっしょうけんめい","meanings":["with all one's might","all out"],"level":40.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12ec5"},"word":"謙遜","reading":"けんそん","meanings":["humble","modest"],"level":41.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12ec6"},"word":"時期尚早","reading":"じきしょうそう","meanings":["premature"],"level":54.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12ec7"},"word":"鋭利","reading":"えいり","meanings":["sharp"],"level":40.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12ec8"},"word":"過酷","reading":"かこく","meanings":["severe","rigorous","cruel","harsh"],"level":54.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12ec9"},"word":"豊か","reading":"ゆたか","meanings":["plentiful","abundant"],"level":25.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12eca"},"word":"情熱","reading":"じょうねつ","meanings":["passionate","enthusiastic"],"level":13.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12ecb"},"word":"迅速","reading":"じんそく","meanings":["quick","fast","rapid","swift"],"level":48.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12ecc"},"word":"謙虚","reading":"けんきょ","meanings":["modest","humble"],"level":39.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12ecd"},"word":"猛","reading":"もう","meanings":["fierce","energetic"],"level":29.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12ece"},"word":"味","reading":"あじ","meanings":["tasty","flavorful","flavourful"],"level":11.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12ecf"},"word":"紛らわしい","reading":"まぎらわしい","level":44.0,"meanings":["confusing","misleading"],"category":"i-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12ed0"},"word":"機敏","reading":"きびん","meanings":["clever","shrewd","smart","quick"],"level":40.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12ed1"},"word":"貴重","reading":"きちょう","meanings":["precious","valuable"],"level":34.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12ed2"},"word":"自在","reading":"じざい","meanings":["freely","at will"],"level":20.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12ed3"},"word":"安全","reading":"あんぜん","meanings":["safe"],"level":6.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12ed4"},"word":"大切","reading":"たいせつ","meanings":["important","precious","valuable"],"level":3.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12ed5"},"word":"苦労","reading":"くろう","meanings":["hard","troublesome"],"level":11.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12ed6"},"word":"結構","reading":"けっこう","meanings":["fine","fair","alright"],"level":25.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12ed7"},"word":"凸凹","reading":"でこぼこ","meanings":["uneven","rough","rugged"],"level":59.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12ed8"},"word":"平凡","reading":"へいぼん","meanings":["common","ordinary","mediocre"],"level":56.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12ed9"},"word":"殊勝","reading":"しゅしょう","meanings":["admirable"],"level":52.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12eda"},"word":"蒸し暑い","reading":"むしあつい","level":35.0,"meanings":["humid","hot and humid"],"category":"i-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12edb"},"word":"短い","reading":"みじかい","level":12.0,"meanings":["short"],"category":"i-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12edc"},"word":"不倫","reading":"ふりん","meanings":["adulterous"],"level":52.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12edd"},"word":"緑色","reading":"みどりいろ","meanings":["green","green in color","green in colour"],"level":13.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12ede"},"word":"野蛮","reading":"やばん","meanings":["savage","uncivilized","uncivilised"],"level":60.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12edf"},"word":"凹凸","reading":"おうとつ","meanings":["uneven","rough","rugged"],"level":57.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12ee0"},"word":"満足","reading":"まんぞく","meanings":["satisfied","totally satisfied"],"level":25.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12ee1"},"word":"丸い","reading":"まるい","level":2.0,"meanings":["circular","round","spherical"],"category":"i-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12ee2"},"word":"小さい","reading":"ちいさい","level":2.0,"meanings":["small","little"],"category":"i-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12ee3"},"word":"緩慢","reading":"かんまん","meanings":["slow","sluggish","dull"],"level":52.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12ee4"},"word":"簡単","reading":"かんたん","meanings":["simple","easy","simply"],"level":33.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12ee5"},"word":"安泰","reading":"あんたい","meanings":["peaceful","secure"],"level":43.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12ee6"},"word":"危ない","reading":"あぶない","level":16.0,"meanings":["dangerous"],"category":"i-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12ee7"},"word":"劇的","reading":"げきてき","meanings":["dramatic"],"level":34.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12ee8"},"word":"生","reading":"なま","meanings":["fresh","raw"],"level":3.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12ee9"},"word":"抽象","reading":"ちゅうしょう","meanings":["abstract"],"level":49.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12eea"},"word":"大抵","reading":"たいてい","meanings":["generally","usually","in most cases"],"level":37.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12eeb"},"word":"臭い","reading":"くさい","level":20.0,"meanings":["stinky","stinking","smelly"],"category":"i-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12eec"},"word":"小規模","reading":"しょうきぼ","meanings":["small scale"],"level":27.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12eed"},"word":"中々","reading":"なかなか","meanings":["very","considerably","quite"],"level":2.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12eee"},"word":"洋風","reading":"ようふう","meanings":["western style"],"level":11.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12eef"},"word":"愚","reading":"ぐ","meanings":["foolish","silly","stupid"],"level":54.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12ef0"},"word":"近い","reading":"ちかい","level":5.0,"meanings":["close","nearby","near"],"category":"i-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12ef1"},"word":"仰々しい","reading":"ぎょうぎょうしい","level":50.0,"meanings":["pompous","exaggerated"],"category":"i-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12ef2"},"word":"硬い","reading":"かたい","level":45.0,"meanings":["stiff","hard"],"category":"i-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12ef3"},"word":"阿呆","reading":"あほう, あほ","meanings":["foolish","simple","idiotic"],"level":54.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12ef4"},"word":"沢山","reading":"たくさん","meanings":["many","numerous","large in amount"],"level":23.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12ef5"},"word":"不良","reading":"ふりょう","meanings":["bad","substandard","delinquent"],"level":11.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12ef6"},"word":"邪魔","reading":"じゃま","meanings":["hindering","obstructive","intrusive"],"level":50.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12ef7"},"word":"斜め","reading":"ななめ","meanings":["diagonal","slanted","tilted"],"level":48.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12ef8"},"word":"丁寧","reading":"ていねい","meanings":["polite","courteous"],"level":46.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12ef9"},"word":"親切","reading":"しんせつ","meanings":["kind"],"level":10.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12efa"},"word":"高級","reading":"こうきゅう","meanings":["high class","high grade","high level"],"level":11.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12efb"},"word":"大事","reading":"だいじ","meanings":["important","valuable","serious"],"level":9.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12efc"},"word":"高い","reading":"たかい","level":7.0,"meanings":["tall","high","expensive"],"category":"i-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12efd"},"word":"足りない","reading":"たりない","level":6.0,"meanings":["not enough","insufficient","not sufficient"],"category":"i-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12efe"},"word":"正直","reading":"しょうじき","meanings":["honest"],"level":6.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12eff"},"word":"無理","reading":"むり","meanings":["impossible","unreasonable","overdone"],"level":17.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12f00"},"word":"露骨","reading":"ろこつ","meanings":["frank","blunt"],"level":43.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12f01"},"word":"良好","reading":"りょうこう","meanings":["good","favorable","satisfactory"],"level":14.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12f02"},"word":"不規則","reading":"ふきそく","meanings":["irregular","unsteady","disorderly","erratic","inconsistant"],"level":25.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12f03"},"word":"非難","reading":"ひなん","meanings":["critical","reproachful"],"level":20.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12f04"},"word":"不安","reading":"ふあん","meanings":["uneasy","anxious"],"level":6.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12f05"},"word":"近代的","reading":"きんだいてき","meanings":["modern"],"level":14.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12f06"},"word":"多い","reading":"おおい","level":5.0,"meanings":["many","numerous","large in amount","lots of"],"category":"i-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12f07"},"word":"若々しい","reading":"わかわかしい","level":19.0,"meanings":["youthful"],"category":"i-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12f08"},"word":"従順","reading":"じゅうじゅん","meanings":["obedient","gentle","meek","submissive","docile","tame"],"level":26.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12f09"},"word":"痛い","reading":"いたい","level":27.0,"meanings":["painful","sore"],"category":"i-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12f0a"},"word":"普遍的","reading":"ふへんてき","meanings":["universal","omnipresent","ubiquitous"],"level":59.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12f0b"},"word":"寛大","reading":"かんだい","meanings":["tolerable","liberal","lenient"],"level":53.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12f0c"},"word":"愚か","reading":"おろか","meanings":["foolish","stupid"],"level":56.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12f0d"},"word":"誠実","reading":"せいじつ","meanings":["sincere","honest","faithful"],"level":41.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12f0e"},"word":"巧い","reading":"うまい","level":50.0,"meanings":["adept","skillful","clever"],"category":"i-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12f0f"},"word":"間抜け","reading":"まぬけ","meanings":["idiotic"],"level":27.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12f10"},"word":"潔い","reading":"いさぎよい","level":28.0,"meanings":["pure hearted","pure"],"category":"i-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12f11"},"word":"背が高い","reading":"せがたかい","level":32.0,"meanings":["tall"],"category":"i-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12f12"},"word":"緊急","reading":"きんきゅう","meanings":["urgent","pressing"],"level":29.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12f13"},"word":"渋い","reading":"しぶい","level":39.0,"meanings":["bitter in flavor","bitter"],"category":"i-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12f14"},"word":"強烈","reading":"きょうれつ","meanings":["strong","intense"],"level":29.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12f15"},"word":"猛烈","reading":"もうれつ","meanings":["fierce","violent","intense"],"level":29.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12f16"},"word":"久しい","reading":"ひさしい","level":3.0,"meanings":["long-continued"],"category":"i-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12f17"},"word":"可哀想","reading":"かわいそう","meanings":["pitiful","poor","pitiable","pathetic"],"level":47.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12f18"},"word":"弱虫","reading":"よわむし","meanings":["weak","cowardly"],"level":9.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12f19"},"word":"残酷","reading":"ざんこく","meanings":["cruel","harsh"],"level":54.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12f1a"},"word":"忠誠","reading":"ちゅうせい","meanings":["loyal"],"level":41.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12f1b"},"word":"必死","reading":"ひっし","meanings":["frantic","desperate","certain death"],"level":7.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12f1c"},"word":"黄色","reading":"きいろ","meanings":["yellow","yellow in colour","yellow in color"],"level":7.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12f1d"},"word":"薄情","reading":"はくじょう","meanings":["cold hearted"],"level":40.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12f1e"},"word":"悪趣味","reading":"あくしゅみ","meanings":["bad tasting"],"level":45.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12f1f"},"word":"慎重","reading":"しんちょう","meanings":["discreet","careful"],"level":39.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12f20"},"word":"無害","reading":"むがい","meanings":["harmless"],"level":20.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12f21"},"word":"情けない","reading":"なさけない","level":15.0,"meanings":["miserable","pitiable","shameful","deplorable","wretched","sad","pitiful"],"category":"i-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12f22"},"word":"不貞","reading":"ふてい","meanings":["unfaithful","unchaste"],"level":51.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12f23"},"word":"必須","reading":"ひっす","meanings":["indispensable","required","essential"],"level":52.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12f24"},"word":"易しい","reading":"やさしい","level":19.0,"meanings":["easy","simple to do"],"category":"i-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12f25"},"word":"庶民的","reading":"しょみんてき","meanings":["popular","plebian","working class"],"level":56.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12f26"},"word":"不幸","reading":"ふこう","meanings":["unhappy","unfortunate"],"level":16.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12f27"},"word":"荒々しい","reading":"あらあらしい","level":44.0,"meanings":["wild","rough","desolate"],"category":"i-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12f28"},"word":"無限","reading":"むげん","meanings":["infinite","limitless"],"level":25.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12f29"},"word":"無邪気","reading":"むじゃき","meanings":["innocent","simple minded","naive"],"level":50.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12f2a"},"word":"余計","reading":"よけい","meanings":["unneeded","excessive","unnecessary"],"level":20.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12f2b"},"word":"特殊","reading":"とくしゅ","meanings":["special","unique"],"level":52.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12f2c"},"word":"偶然","reading":"ぐうぜん","meanings":["suddenly","unexpectedly"],"level":50.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12f2d"},"word":"上手","reading":"じょうず","meanings":["good at","skillful","skilled at","skilled"],"level":2.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12f2e"},"word":"純粋","reading":"じゅんすい","meanings":["pure","genuine"],"level":34.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12f2f"},"word":"強い","reading":"つよい","level":7.0,"meanings":["strong"],"category":"i-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12f30"},"word":"恐ろしい","reading":"おそろしい","level":29.0,"meanings":["scary","fearful"],"category":"i-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12f31"},"word":"主観的","reading":"しゅかんてき","meanings":["subjective"],"level":24.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12f32"},"word":"秘密","reading":"ひみつ","meanings":["secret"],"level":32.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12f33"},"word":"無敵","reading":"むてき","meanings":["unrivaled","invincible"],"level":21.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12f34"},"word":"円い","reading":"まるい","level":2.0,"meanings":["round","circular"],"category":"i-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12f35"},"word":"遺伝","reading":"いでん","meanings":["hereditary"],"level":36.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12f36"},"word":"惜しい","reading":"おしい","level":57.0,"meanings":["regrettable","disappointing","precious","dear"],"category":"i-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12f37"},"word":"貧乏","reading":"びんぼう","meanings":["poor","destitute"],"level":30.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12f38"},"word":"平ら","reading":"たいら","meanings":["flat"],"level":4.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12f39"},"word":"素朴","reading":"そぼく","meanings":["simple","naive"],"level":55.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12f3a"},"word":"良い","reading":"よい, いい","level":11.0,"meanings":["good"],"category":"i-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12f3b"},"word":"贅沢","reading":"ぜいたく","meanings":["extravagant"],"level":23.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12f3c"},"word":"浅い","reading":"あさい","level":15.0,"meanings":["shallow"],"category":"i-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12f3d"},"word":"大胆","reading":"だいたん","meanings":["bold","daring","audacious"],"level":59.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12f3e"},"word":"基本的","reading":"きほんてき","meanings":["fundamental","standard","basic"],"level":16.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12f3f"},"word":"陽気","reading":"ようき","meanings":["cheerful","jovial","merry","lively","seasonal"],"level":12.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12f40"},"word":"陰気","reading":"いんき","meanings":["gloomy","melancholy"],"level":45.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12f41"},"word":"不完全","reading":"ふかんぜん","meanings":["incomplete","imperfect"],"level":16.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12f42"},"word":"空疎","reading":"くうそ","meanings":["vain","groundless","futile"],"level":54.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12f43"},"word":"芳しい","reading":"かんばしい","level":52.0,"meanings":["sweet","fragrant","aromatic"],"category":"i-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12f44"},"word":"恐い","reading":"こわい","level":31.0,"meanings":["scary","frightening","eerie","deadful"],"category":"i-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12f45"},"word":"憎い","reading":"にくい","level":49.0,"meanings":["hateful","abominable","detestable"],"category":"i-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12f46"},"word":"疎遠","reading":"そえん","meanings":["estrangement","neglect"],"level":54.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12f47"},"word":"粗悪","reading":"そあく","meanings":["coarse","crude","inferior"],"level":55.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12f48"},"word":"鬱陶しい","reading":"うっとうしい","level":50.0,"meanings":["gloomy","depressing"],"category":"i-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12f49"},"word":"賢い","reading":"かしこい","level":48.0,"meanings":["clever","intelligent"],"category":"i-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12f4a"},"word":"素晴らしい","reading":"すばらしい","level":21.0,"meanings":["wonderful","splendid","the best"],"category":"i-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12f4b"},"word":"古典的","reading":"こてんてき","meanings":["classical"],"level":16.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12f4c"},"word":"清浄","reading":"せいじょう, しょうじょう","meanings":["pure","clean"],"level":53.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12f4d"},"word":"規則正しい","reading":"きそくただしい","level":25.0,"meanings":["regular","well regulated","systematic"],"category":"i-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12f4e"},"word":"四角","reading":"しかく","meanings":["square"],"level":5.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12f4f"},"word":"淑やか","reading":"しとやか","meanings":["graceful","modest","gentle","polite"],"level":58.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12f50"},"word":"恭しい","reading":"うやうやしい","level":56.0,"meanings":["respectful","reverent"],"category":"i-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12f51"},"word":"永遠","reading":"えいえん","meanings":["eternal","permanent"],"level":32.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12f52"},"word":"惜しまない","reading":"おしまない","level":59.0,"meanings":["unsparing","sparing no effort"],"category":"i-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12f53"},"word":"大きい","reading":"おおきい","level":1.0,"meanings":["big","large"],"category":"i-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12f54"},"word":"下品","reading":"げひん","meanings":["crude","vulgar"],"level":16.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12f55"},"word":"自由","reading":"じゆう","meanings":["free","at liberty"],"level":7.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12f56"},"word":"微か","reading":"かすか","meanings":["delicate","faint","indistinct","dim"],"level":28.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12f57"},"word":"柔らかい","reading":"やわらかい","level":43.0,"meanings":["gentle","flexible","soft","tender"],"category":"i-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12f58"},"word":"巨大","reading":"きょだい","meanings":["huge","gigantic","enormous"],"level":27.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12f59"},"word":"伝統的","reading":"でんとうてき","meanings":["traditional"],"level":24.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12f5a"},"word":"精神的","reading":"せいしんてき","meanings":["spiritual"],"level":30.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12f5b"},"word":"意図的","reading":"いとてき","meanings":["intentional","on purpose"],"level":14.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12f5c"},"word":"剛健","reading":"ごうけん","meanings":["vigorous","vigourous","virile"],"level":49.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12f5d"},"word":"柔和","reading":"にゅうわ","meanings":["gentle"],"level":43.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12f5e"},"word":"無謀","reading":"むぼう","meanings":["reckless","thoughtless","unpremeditated"],"level":49.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12f5f"},"word":"案外","reading":"あんがい","meanings":["unexpectedly","more than expected"],"level":22.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12f60"},"word":"誇大","reading":"こだい","meanings":["exaggerated","hyperbolic"],"level":46.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12f61"},"word":"膨大","reading":"ぼうだい","meanings":["huge","bulky","enormous","extensive"],"level":52.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12f62"},"word":"大好き","reading":"だいすき","meanings":["really liked","loved","liked a lot","liked very much"],"level":13.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12f63"},"word":"邪","reading":"よこしま","meanings":["wicked","evil"],"level":50.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12f64"},"word":"静か","reading":"しずか","meanings":["quiet"],"level":18.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12f65"},"word":"熱烈","reading":"ねつれつ","meanings":["impassioned","ardent","vehement"],"level":29.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12f66"},"word":"貞節","reading":"ていせつ","meanings":["chaste","virtuous","faithful"],"level":51.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12f67"},"word":"不浄","reading":"ふじょう","meanings":["unclean","dirty","impure","filthy","defiled;"],"level":53.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12f68"},"word":"平気","reading":"へいき","meanings":["calm","cool","all right","okay"],"level":4.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12f69"},"word":"繊細","reading":"せんさい","meanings":["delicate","dainty","fine","slim","sensitive","subtle"],"level":53.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12f6a"},"word":"乱暴","reading":"らんぼう","meanings":["violenct"],"level":19.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12f6b"},"word":"無事","reading":"ぶじ","meanings":["safe and sound","safe"],"level":17.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12f6c"},"word":"無秩序","reading":"むちつじょ","meanings":["disorderd","chaotic","confusing"],"level":54.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12f6d"},"word":"無茶","reading":"むちゃ","meanings":["absurd","rash","excessive"],"level":17.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12f6e"},"word":"新しい","reading":"あたらしい","level":9.0,"meanings":["new"],"category":"i-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12f6f"},"word":"憎らしい","reading":"にくらしい","level":49.0,"meanings":["hateful"],"category":"i-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12f70"},"word":"暖かい","reading":"あたたかい","level":32.0,"meanings":["warm"],"category":"i-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12f71"},"word":"酸っぱい","reading":"すっぱい","level":32.0,"meanings":["sour"],"category":"i-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12f72"},"word":"悪戯","reading":"いたずら","meanings":["teasing","mischievous","tricky"],"level":60.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12f73"},"word":"楽しみ","reading":"たのしみ","meanings":["enjoyable","pleasurable","diverting","amusing"],"level":10.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12f74"},"word":"丁度","reading":"ちょうど","meanings":["exactly","just"],"level":9.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12f75"},"word":"直接","reading":"ちょくせつ","meanings":["direct"],"level":26.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12f76"},"word":"円滑","reading":"えんかつ","meanings":["effortless","smooth"],"level":42.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12f77"},"word":"真実","reading":"しんじつ","meanings":["truthful","real"],"level":16.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12f78"},"word":"微妙","reading":"びみょう","meanings":["delicate","sensitive","complicated","doubtful"],"level":28.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12f79"},"word":"堅い","reading":"かたい","level":42.0,"meanings":["solid","tough"],"category":"i-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12f7a"},"word":"不快","reading":"ふかい","meanings":["unpleasant","uncomfortable"],"level":30.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12f7b"},"word":"可愛い","reading":"かわいい","level":18.0,"meanings":["cute"],"category":"i-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12f7c"},"word":"面倒","reading":"めんどう","meanings":["troublesome","difficult"],"level":20.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12f7d"},"word":"広い","reading":"ひろい","level":3.0,"meanings":["wide"],"category":"i-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12f7e"},"word":"甘い","reading":"あまい","level":36.0,"meanings":["sweet"],"category":"i-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12f7f"},"word":"美しい","reading":"うつくしい","level":9.0,"meanings":["beautiful"],"category":"i-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12f80"},"word":"痛恨","reading":"つうこん","meanings":["regretful"],"level":47.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12f81"},"word":"嫌味","reading":"いやみ","meanings":["hurtful","sarcastic","disagreeable"],"level":22.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12f82"},"word":"別","reading":"べつ","meanings":["different","separate"],"level":11.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12f83"},"word":"経済的","reading":"けいざいてき","meanings":["economic","financial"],"level":23.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12f84"},"word":"尊い","reading":"とうとい","level":33.0,"meanings":["revered","noble","precious"],"category":"i-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12f85"},"word":"敏感","reading":"びんかん","meanings":["sensitive","sensible"],"level":40.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12f86"},"word":"怠慢","reading":"たいまん","meanings":["negligent","procrastinating","careless"],"level":52.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12f87"},"word":"駄目","reading":"だめ","meanings":["useless","hopeless","broken","wasted"],"level":50.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12f88"},"word":"中途半端","reading":"ちゅうとはんぱ","meanings":["half finished","half assed"],"level":27.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12f89"},"word":"極端","reading":"きょくたん","meanings":["extreme"],"level":27.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12f8a"},"word":"大丈夫","reading":"だいじょうぶ","meanings":["safe","all right","okay"],"level":18.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12f8b"},"word":"幼い","reading":"おさない","level":28.0,"meanings":["childish","very young","immature"],"category":"i-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12f8c"},"word":"自然","reading":"しぜん","meanings":["natural"],"level":13.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12f8d"},"word":"汚い","reading":"きたない","level":36.0,"meanings":["dirty","filthy","foul","unclean"],"category":"i-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12f8e"},"word":"丹念","reading":"たんねん","meanings":["diligent","applied"],"level":53.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12f8f"},"word":"不振","reading":"ふしん","meanings":["dull","slumped","stagnated"],"level":26.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12f90"},"word":"過敏","reading":"かびん","meanings":["oversensitive","nervous"],"level":40.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12f91"},"word":"卑劣","reading":"ひれつ","meanings":["mean","cowardly","base"],"level":59.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12f92"},"word":"透明","reading":"とうめい","meanings":["transparent"],"level":40.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12f93"},"word":"憂鬱","reading":"ゆううつ","meanings":["depressed","melancholy","dejected","gloomy"],"level":55.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12f94"},"word":"皮肉","reading":"ひにく","meanings":["irony","sarcastic"],"level":5.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12f95"},"word":"楽しい","reading":"たのしい","level":8.0,"meanings":["fun"],"category":"i-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12f96"},"word":"突然","reading":"とつぜん","meanings":["suddenly"],"level":26.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12f97"},"word":"遠い","reading":"とおい","level":16.0,"meanings":["far","far away"],"category":"i-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12f98"},"word":"意外","reading":"いがい","meanings":["unexpected"],"level":11.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12f99"},"word":"明るい","reading":"あかるい","level":6.0,"meanings":["bright"],"category":"i-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12f9a"},"word":"厄介","reading":"やっかい","meanings":["troublesome","burdensome","hard to deal with"],"level":35.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12f9b"},"word":"薄弱","reading":"はくじゃく","meanings":["weak","feeble"],"level":40.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12f9c"},"word":"快速","reading":"かいそく","meanings":["fast","express"],"level":30.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12f9d"},"word":"大量","reading":"たいりょう","meanings":["large in quantity","massive"],"level":24.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12f9e"},"word":"青い","reading":"あおい","level":5.0,"meanings":["blue","unripe"],"category":"i-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12f9f"},"word":"意地悪","reading":"いじわる","meanings":["malicious","mean"],"level":14.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12fa0"},"word":"赤い","reading":"あかい","level":4.0,"meanings":["red"],"category":"i-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12fa1"},"word":"独立","reading":"どくりつ","meanings":["independent"],"level":26.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12fa2"},"word":"早い","reading":"はやい","level":4.0,"meanings":["early","fast","quick"],"category":"i-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12fa3"},"word":"偉大","reading":"いだい","meanings":["great","grand","outstanding"],"level":51.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12fa4"},"word":"体系的","reading":"たいけいてき","meanings":["systematic"],"level":30.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12fa5"},"word":"虚弱","reading":"きょじゃく","meanings":["weak","feeble"],"level":17.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12fa6"},"word":"醜い","reading":"みにくい","level":60.0,"meanings":["ugly","unattractive","unsightly","unseemly"],"category":"i-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12fa7"},"word":"立派","reading":"りっぱ","meanings":["high class","splendid","fine"],"level":21.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12fa8"},"word":"可能","reading":"かのう","meanings":["possible"],"level":18.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12fa9"},"word":"熱心","reading":"ねっしん","meanings":["enthusiastic","passionate","zealous"],"level":13.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12faa"},"word":"健康","reading":"けんこう","meanings":["healthy"],"level":27.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12fab"},"word":"様々","reading":"さまざま","meanings":["varied"],"level":13.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12fac"},"word":"重い","reading":"おもい","level":9.0,"meanings":["heavy"],"category":"i-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12fad"},"word":"新た","reading":"あらた","meanings":["new","fresh","novel"],"level":11.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12fae"},"word":"鋭い","reading":"するどい","level":40.0,"meanings":["sharp"],"category":"i-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12faf"},"word":"垂直","reading":"すいちょく","meanings":["vertical","perpendicular"],"level":33.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12fb0"},"word":"感慨無量","reading":"かんがいむりょう","meanings":["deeply moved","filled with emotion"],"level":60.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12fb1"},"word":"傲慢","reading":"ごうまん","meanings":["prideful","haughty","arroganct","insolent"],"level":52.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12fb2"},"word":"長い","reading":"ながい","level":6.0,"meanings":["long"],"category":"i-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12fb3"},"word":"残虐","reading":"ざんぎゃく","meanings":["cruel","brutal"],"level":53.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12fb4"},"word":"不透明","reading":"ふとうめい","meanings":["opaque"],"level":42.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12fb5"},"word":"偉い","reading":"えらい","level":51.0,"meanings":["great","excellent","admirable","remarkable"],"category":"i-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12fb6"},"word":"平和","reading":"へいわ","meanings":["peaceful","harmonious"],"level":9.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12fb7"},"word":"快い","reading":"こころよい","level":30.0,"meanings":["pleasant"],"category":"i-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12fb8"},"word":"爽やか","reading":"さわやか","meanings":["refreshing","fresh","invigorating","eloquent"],"level":47.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12fb9"},"word":"等しい","reading":"ひとしい","level":18.0,"meanings":["equal","similar","equivalent"],"category":"i-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12fba"},"word":"宜しい","reading":"よろしい","level":38.0,"meanings":["good","okay","all right","fine"],"category":"i-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12fbb"},"word":"旨い","reading":"うまい","level":43.0,"meanings":["delicious","skillful","clever"],"category":"i-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12fbc"},"word":"太い","reading":"ふとい","level":3.0,"meanings":["fat"],"category":"i-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12fbd"},"word":"重要","reading":"じゅうよう","meanings":["essential","important","necessary"],"level":9.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12fbe"},"word":"静寂","reading":"せいじゃく","meanings":["silent","still","quiet"],"level":56.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12fbf"},"word":"別々","reading":"べつべつ","meanings":["separately","individually"],"level":11.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12fc0"},"word":"少ない","reading":"すくない","level":3.0,"meanings":["few","scarce"],"category":"i-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12fc1"},"word":"非凡","reading":"ひぼん","meanings":["prodigal","rare","unique","extraordinary"],"level":56.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12fc2"},"word":"孤独","reading":"こどく","meanings":["isolated","lonely","solitary"],"level":52.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12fc3"},"word":"不足","reading":"ふそく","meanings":["deficient","lacking","short in number","insufficient"],"level":4.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12fc4"},"word":"神聖","reading":"しんせい","meanings":["holy"],"level":34.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12fc5"},"word":"優秀","reading":"ゆうしゅう","meanings":["superior"],"level":23.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12fc6"},"word":"弱々しい","reading":"よわよわしい","level":9.0,"meanings":["weak looking","frail","weak seeming"],"category":"i-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12fc7"},"word":"軽い","reading":"かるい","level":10.0,"meanings":["lightweight","light","light weight"],"category":"i-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12fc8"},"word":"典型的","reading":"てんけいてき","meanings":["typical"],"level":24.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12fc9"},"word":"高尚","reading":"こうしょう","meanings":["high","noble","refined"],"level":54.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12fca"},"word":"弱い","reading":"よわい","level":7.0,"meanings":["weak"],"category":"i-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12fcb"},"word":"頑固","reading":"がんこ","meanings":["stubborn"],"level":14.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12fcc"},"word":"小柄","reading":"こがら","meanings":["small in build","small statured","petite"],"level":42.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12fcd"},"word":"退屈","reading":"たいくつ","meanings":["boring","tedious"],"level":27.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12fce"},"word":"懐かしい","reading":"なつかしい","level":30.0,"meanings":["nostalgic"],"category":"i-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12fcf"},"word":"汗臭い","reading":"あせくさい","level":26.0,"meanings":["sweaty smelling","stinking of sweat"],"category":"i-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12fd0"},"word":"変","reading":"へん","meanings":["strange"],"level":15.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12fd1"},"word":"無意識","reading":"むいしき","meanings":["unconscious","involuntary"],"level":19.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12fd2"},"word":"崇高","reading":"すうこう","meanings":["lofty","sublime","noble"],"level":59.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12fd3"},"word":"斬新","reading":"ざんしん","meanings":["novel","original"],"level":46.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12fd4"},"word":"酷","reading":"こく","meanings":["severe","harsh","strict","unfair"],"level":54.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12fd5"},"word":"酷い","reading":"ひどい","level":54.0,"meanings":["cruel","awful","severe","terrible","violent"],"category":"i-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12fd6"},"word":"懸命","reading":"けんめい","meanings":["eager"],"level":38.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12fd7"},"word":"優雅","reading":"ゆうが","meanings":["elegant","graceful"],"level":40.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12fd8"},"word":"稚拙","reading":"ちせつ","meanings":["unskillful","childish"],"level":59.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12fd9"},"word":"傑作","reading":"けっさく","meanings":["masterful","best work"],"level":58.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12fda"},"word":"正確","reading":"せいかく","meanings":["accurate","precise","exact"],"level":20.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12fdb"},"word":"暗い","reading":"くらい","level":13.0,"meanings":["dark"],"category":"i-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12fdc"},"word":"感心","reading":"かんしん","meanings":["admirable"],"level":13.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12fdd"},"word":"馬鹿らしい","reading":"ばからしい","level":38.0,"meanings":["absurd"],"category":"i-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12fde"},"word":"不明","reading":"ふめい","meanings":["unknown","unclear","uncertain","unsure"],"level":6.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12fdf"},"word":"清い","reading":"きよい","level":28.0,"meanings":["pure","clean"],"category":"i-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12fe0"},"word":"適当","reading":"てきとう","meanings":["appropriate","proper","irresponsible"],"level":30.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12fe1"},"word":"濃い","reading":"こい","level":27.0,"meanings":["thick","dense","concentrated","deep","strong"],"category":"i-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12fe2"},"word":"怖い","reading":"こわい","level":29.0,"meanings":["scary"],"category":"i-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12fe3"},"word":"厳粛","reading":"げんしゅく","meanings":["grave","solemn","severe","serious"],"level":54.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12fe4"},"word":"無知","reading":"むち","meanings":["ignorant"],"level":17.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12fe5"},"word":"恥ずかしい","reading":"はずかしい","level":35.0,"meanings":["embarrassing","shameful"],"category":"i-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12fe6"},"word":"穏当","reading":"おんとう","meanings":["proper","reasonable"],"level":46.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12fe7"},"word":"不均衡","reading":"ふきんこう","meanings":["imbalanced","disparate","inequal"],"level":59.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12fe8"},"word":"偏狭","reading":"へんきょう","meanings":["narrow minded","intolerant"],"level":52.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12fe9"},"word":"不孝","reading":"ふこう","meanings":["disobedient to parents","lacking filial piety"],"level":40.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12fea"},"word":"苦手","reading":"にがて","meanings":["hard to deal with","weak point","poor at","not very good at","bad at"],"level":11.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12feb"},"word":"不適","reading":"ふてき","meanings":["unsuitable","inappropriate"],"level":30.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12fec"},"word":"難しい","reading":"むずかしい","level":20.0,"meanings":["difficult","hard"],"category":"i-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12fed"},"word":"愛憎","reading":"あいぞう","meanings":["loved and hated"],"level":47.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12fee"},"word":"浮気","reading":"うわき","meanings":["wanton","unfaithful","inconstant"],"level":30.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12fef"},"word":"新鋭","reading":"しんえい","meanings":["freshly picked","newly produced"],"level":40.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12ff0"},"word":"甚大","reading":"じんだい","meanings":["immense","tremendous","enormous"],"level":59.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12ff1"},"word":"簡易","reading":"かんい","meanings":["simple","easy"],"level":33.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12ff2"},"word":"多忙","reading":"たぼう","meanings":["busy"],"level":19.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12ff3"},"word":"瞳孔","reading":"どうこう","meanings":["pupillary"],"level":46.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12ff4"},"word":"平静","reading":"へいせい","meanings":["calm","serene","tranquil"],"level":18.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12ff5"},"word":"久しぶり","reading":"ひさしぶり","meanings":["seen a long time ago"],"level":3.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12ff6"},"word":"珍","reading":"ちん","meanings":["rare","curious","strange"],"level":43.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12ff7"},"word":"速い","reading":"はやい","level":10.0,"meanings":["fast"],"category":"i-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12ff8"},"word":"見事","reading":"みごと","meanings":["splendid","magnificent","beautiful","admirable","praiseworthy act","feat"],"level":11.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12ff9"},"word":"気持ち悪い","reading":"きもちわるい","level":14.0,"meanings":["terrible","bad feeling","feeling bad","feeling terrible"],"category":"i-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12ffa"},"word":"均等","reading":"きんとう","meanings":["equal","uniform","even"],"level":31.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12ffb"},"word":"面白い","reading":"おもしろい","level":16.0,"meanings":["interesting","amusing","funny"],"category":"i-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12ffc"},"word":"冷酷","reading":"れいこく","meanings":["cruel","coldhearted","relentless","ruthless"],"level":54.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12ffd"},"word":"温かい","reading":"あたたかい","level":12.0,"meanings":["warm"],"category":"i-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12ffe"},"word":"不純","reading":"ふじゅん","meanings":["impure"],"level":34.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db12fff"},"word":"全般的","reading":"ぜんぱんてき","meanings":["general","overall","across the board"],"level":38.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db13000"},"word":"幸せ","reading":"しあわせ","meanings":["happy"],"level":16.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db13001"},"word":"不可能","reading":"ふかのう","meanings":["impossible","not possible"],"level":22.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db13002"},"word":"恥知らず","reading":"はじしらず","meanings":["shameless"],"level":37.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db13003"},"word":"強力","reading":"きょうりょく","meanings":["strong","powerful"],"level":7.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db13004"},"word":"輸出","reading":"ゆしゅつ","meanings":["exported"],"level":24.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db13005"},"word":"不愉快","reading":"ふゆかい","meanings":["unpleasant","unhappy","discomfort","disagreeable"],"level":57.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db13006"},"word":"非常","reading":"ひじょう","meanings":["extraordinary","unusual"],"level":17.0,"category":"na-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db13007"},"word":"深い","reading":"ふかい","level":12.0,"meanings":["deep"],"category":"i-adjective"}
+{"_id":{"$oid":"5779b72962e9dc855db13008"},"word":"失礼","reading":"しつれい","meanings":["rude","impolite"],"level":7.0,"category":"na-adjective"}
