@@ -43,4 +43,4 @@ Missing:
 - 運がいい (Level 10 adj)
 - 気持ちいい (Level 11 adj)
 - 丁度いい (Level 11 adj)
-- probably more, see todo no. 1
+- probably more, see to do list about updating words
