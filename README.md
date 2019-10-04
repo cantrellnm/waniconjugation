@@ -12,6 +12,7 @@ These files are imported when code gets deployed, so making changes to these fil
 
 ## To Do:
 
+- check that API keys still work
 - update words to align with current WaniKani vocab & levels
 - clarify exceptions for some suru verbs? (past nai, imperative, volitional) (P.S. I don't remember what this note means.)
 - find out why progressive, potential, causative, and passive tenses are listed as category: ichidan and check if it's true of godan verbs like 上る, 入る for progressive (and other tenses?)

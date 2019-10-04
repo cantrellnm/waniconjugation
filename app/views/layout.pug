@@ -3,10 +3,16 @@ html(lang='en' ng-app='waniConj')
   head
     meta(charset='utf-8')
     meta(name='viewport' content='width=device-width, initial-scale=1.0')
-    title 鰐活用 「WaniConjugation
+    title 鰐活用 「WaniConjugation」
     link(rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css')
     link(rel='stylesheet' href='/css/styles.css')
     link(rel='icon' href='')
+    script(async src="https://www.googletagmanager.com/gtag/js?id=UA-149342866-1")
+    script.
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-149342866-1');
     script(src='/js/jquery.min.js')
     script(src='/js/responsivevoice.js')
     script(src='/js/wanakana.min.js')
@@ -18,7 +24,7 @@ html(lang='en' ng-app='waniConj')
       a(class="h2 brand" class="active" href="/")
         span(lang="ja") 鰐活用
         | 「WaniConjugation」
-      p a companion tool for users of
+      p a companion tool for users of&nbsp;
         a(href="https://www.wanikani.com/") WaniKani
     nav(class="navbar")
       ul(class="nav navbar-nav")
@@ -41,11 +47,14 @@ html(lang='en' ng-app='waniConj')
             | Translate
     block content
     footer(class="text-center")
-      a(href="http://responsivevoice.org") ResponsiveVoice-NonCommercial licensed under&nbsp;
-      a(href="http://creativecommons.org/licenses/by-nc-nd/4.0/")
+      a(href="http://responsivevoice.org" target="_blank") ResponsiveVoice-NonCommercial licensed under&nbsp;
+      a(href="http://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank")
         img(title="ResponsiveVoice Text To Speech" src="http://responsivevoice.org/wp-content/uploads/2014/08/95x15.png" alt="95x15" width="95" height="15")
       p
         small
-          | Site created by N Cantrell. Open source&nbsp;
-          a(href="https://github.com/cantrellnm/waniconjugation") on Github.
+          | Site created by cantrellnm. Open source&nbsp;
+          a(href="https://github.com/cantrellnm/waniconjugation" target="_blank") on Github.
+        p If you use and enjoy the site please consider supporting the developer with a small donation&nbsp;
+          a(href="https://ko-fi.com/cantrellnm" target="_blank") on Ko-Fi
+          | .
       </p>
