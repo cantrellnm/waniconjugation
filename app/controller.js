@@ -1,8 +1,8 @@
-var https = require('https');
-var mongoose = require('mongoose');
-var verbs = mongoose.model('Verb');
-var en_verbs = mongoose.model('En_verb');
-var adj = mongoose.model('Adjective');
+const axios = require('axios');
+const mongoose = require('mongoose');
+const verbs = mongoose.model('Verb');
+const en_verbs = mongoose.model('En_verb');
+const adj = mongoose.model('Adjective');
 
 module.exports.index = function(req, res) {
   res.render('index');
@@ -126,46 +126,83 @@ module.exports.adjList = function(req, res) {
 };
 
 module.exports.userInfo = function(req, res) {
-  https.get({
-      hostname: 'www.wanikani.com',
-      path: '/api/user/'+req.params.key+'/vocabulary',
+  axios.get('https://api.wanikani.com/v2/user', {
       headers: {
-        'Content-Type': 'application/json',
-        'Accept': 'application/json'
-    }}, (response) => {
-      var data = '';
-      response.setEncoding('utf8');
-      response.on('data', (chunk) => {
-        data += chunk;
-      });
-      response.on('end', () => {
-        if (data) {
-          data = JSON.parse(data);
-          parseUserData(res, data, req.params.key);
-        } else {
-          sendJSONresponse(res, 500, 'error requesting data from WaniKani');
-        }
-      });
+        'Accept': 'application/json',
+        'Authorization': 'Bearer ' + req.params.key,
+      }
+    }).then(response => {
+      parseUserData(res, response, req.params.key);
+    }).catch(error => {
+      console.log(error);
+      sendJSONresponse(res, 500, 'error requesting data from WaniKani');
     });
 };
 
-function parseUserData(res, data, key) {
+async function getUserVocabData(key) {
+  let subject_ids = [];
+  try {
+    let response = await axios.get('https://api.wanikani.com/v2/review_statistics?subject_types=vocabulary', {
+      headers: {
+        'Accept': 'application/json',
+        'Authorization': 'Bearer ' + key,
+      }
+    });
+    subject_ids = subject_ids.concat(response.data.data);
+    while (response.data.pages.next_url) {
+      response = await axios.get(response.data.pages.next_url, {
+        headers: {
+          'Accept': 'application/json',
+          'Authorization': 'Bearer ' + key,
+        }
+      });
+      subject_ids = subject_ids.concat(response.data.data);
+    }
+    subject_ids = subject_ids.map(d => (d.data.subject_id));
+  } catch (error) {
+    console.log(error);
+  }
+  try {
+    let data = [];
+    let response = await axios.get('https://api.wanikani.com/v2/subjects?types=vocabulary', {
+      headers: {
+        'Accept': 'application/json',
+        'Authorization': 'Bearer ' + key,
+      }
+    });
+    data = data.concat(response.data.data);
+    while (response.data.pages.next_url) {
+      response = await axios.get(response.data.pages.next_url, {
+        headers: {
+          'Accept': 'application/json',
+          'Authorization': 'Bearer ' + key,
+        }
+      });
+      data = data.concat(response.data.data);
+    }
+    return data.filter(d => (subject_ids.includes(d.id))).map(d => (d.data.characters));
+  } catch (error) {
+    console.log(error);
+    return [];
+  }
+}
+
+async function parseUserData(res, response, key) {
   var info = {
-    username: data.user_information.username,
-    level: data.user_information.level,
+    username: response.data.data.username,
+    level: response.data.data.level,
     APIkey: key
   };
+  let vocab = await getUserVocabData(key);
   verbs.find({ level: {$lte: info.level} }).exec((err, docs) => {
     if (err) sendJSONresponse(res, 500, 'error fetching verb data');
     info.verbs = docs.filter((doc) => {
-      var matching = data.requested_information.general.filter((word) => { return word.character === doc.verb; });
-      return (matching[0] && matching[0].user_specific);
+      return vocab.includes(doc.verb);
     });
     adj.find({ level: {$lte: info.level} }).exec((err, docs) => {
       if (err) sendJSONresponse(res, 500, 'error fetching adj data');
       info.adj = docs.filter((doc) => {
-        var matching = data.requested_information.general.filter((word) => { return word.character === doc.word; });
-        return (matching[0] && matching[0].user_specific);
+        return vocab.includes(doc.word);
       });
       sendJSONresponse(res, 200, info);
     });
