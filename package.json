@@ -18,7 +18,7 @@
     "gulp": "^4.0.2",
     "gulp-mongodb-data": "^3.0.1",
     "mongoose": "^5.9.0",
-    "pug": "^2.0.0"
+    "pug": "^3.0.1"
   },
   "devDependencies": {
     "nodemon": "^1.19.3"
