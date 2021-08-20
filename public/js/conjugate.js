@@ -316,7 +316,7 @@ const verb = function(word) {
         },
         negative: {
           kanji: a_stem.kanji+'ないでください',
-          kana: a_stem.kana+'ないでくださいい'
+          kana: a_stem.kana+'ないでください'
         }
       },
       honorific: {
