@@ -8,7 +8,7 @@ Use app at: [waniconjugation.herokuapp.com](http://waniconjugation.herokuapp.com
 
 A copy of the MongoDB collections are saved as `.json` files in the `data` folder and can be imported to your local db (while it's running) with `yarn build` or `npm run build`.
 
-These files are imported when code gets deployed, so making changes to these files means making changes to the data on the site. If any data needs to be corrected, these files are where you do it.
+~~These files are imported when code gets deployed, so making changes to these files means making changes to the data on the site. If any data needs to be corrected, these files are where you do it.~~
 
 ## To Do:
 
