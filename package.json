@@ -6,7 +6,7 @@
   "repository": "",
   "author": "cantrellnm <cantrellnm@gmail.com>",
   "scripts": {
-    "build": "sh import_data.sh",
+    "build": "sh import_data.sh $DB_URI",
     "start": "node server.js",
     "dev": "nodemon server.js"
   },
