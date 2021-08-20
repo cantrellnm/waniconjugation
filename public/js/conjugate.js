@@ -1,60 +1,60 @@
 // important reference: http://www.epochrypha.com/japanese/materials/verbs/
 
-function get_root(wrd) {
+function get_root(word) {
   return {
-    kanji: wrd.verb.substring(0, wrd.verb.length-1),
-    kana: wrd.reading.substring(0, wrd.reading.length-1)
+    kanji: word.verb.substring(0, word.verb.length-1),
+    kana: word.reading.substring(0, word.reading.length-1)
   };
 }
 
-function a_base(wrd) {
+function a_base(word) {
   var sounds = [['う','わ'],['く','か'],['ぐ','が'],['す','さ'],['ず','ざ'],['つ','た'],['づ','だ'],['ぬ','な'],['ふ','は'],['ぶ','ば'],['ぷ','ぱ'],['む','ま'],['る','ら']];
-  var ending = wrd.verb.substr(wrd.verb.length - 1);
-  if (wrd.category === 'ichidan') {
+  var ending = word.verb.substr(word.verb.length - 1);
+  if (word.category === 'ichidan') {
     return '';
   } else {
     var sound = sounds.filter(function(arr){return arr[0] === ending;})[0];
     return sound[1];
   }
 }
-function i_base(wrd) {
+function i_base(word) {
   var sounds = [['う','い'],['く','き'],['ぐ','ぎ'],['す','し'],['ず','じ'],['つ','ち'],['づ','ぢ'],['ぬ','に'],['ふ','ひ'],['ぶ','び'],['ぷ','ぴ'],['む','み'],['る','り']];
-  var ending = wrd.verb.substr(wrd.verb.length - 1);
-  if (wrd.category === 'ichidan') {
+  var ending = word.verb.substr(word.verb.length - 1);
+  if (word.category === 'ichidan') {
     return '';
   } else {
     var sound = sounds.filter(function(arr){return arr[0] === ending;})[0];
     return sound[1];
   }
 }
-function e_base(wrd) {
+function e_base(word) {
   var sounds = [['う','え'],['く','け'],['ぐ','げ'],['す','せ'],['ず','ぜ'],['つ','て'],['づ','で'],['ぬ','ね'],['ふ','へ'],['ぶ','べ'],['ぷ','ぺ'],['む','め'],['る','れ']];
-  var ending = wrd.verb.substr(wrd.verb.length - 1);
+  var ending = word.verb.substr(word.verb.length - 1);
   var sound = sounds.filter(function(arr){return arr[0] === ending;})[0];
   return sound[1];
 }
-function o_base(wrd) {
+function o_base(word) {
   var sounds = [['う','おう'],['く','こう'],['ぐ','ごう'],['す','そう'],['ず','ぞう'],['つ','とう'],['づ','どう'],['ぬ','のう'],['ふ','ほう'],['ぶ','ぼう'],['ぷ','ぽう'],['む','もう'],['る','ろう']];
-  var ending = wrd.verb.substr(wrd.verb.length - 1);
-  if (wrd.category === 'ichidan') {
+  var ending = word.verb.substr(word.verb.length - 1);
+  if (word.category === 'ichidan') {
     return 'よう';
   } else {
     var sound = sounds.filter(function(arr){return arr[0] === ending;})[0];
     return sound[1];
   }
 }
-function u_base(wrd) {
-  var ending = wrd.verb.substr(wrd.verb.length - 1);
+function u_base(word) {
+  var ending = word.verb.substr(word.verb.length - 1);
   return ending;
 }
-function te_base(wrd) {
-  var ending = wrd.verb.substr(wrd.verb.length - 1);
-  if (wrd.category === 'ichidan') {
+function te_base(word) {
+  var ending = word.verb.substr(word.verb.length - 1);
+  if (word.category === 'ichidan') {
     return 'て';
   } else {
-    if (['問う','訪う','請う','乞う','恋う'].indexOf(wrd.verb) > -1) {
+    if (['問う','訪う','請う','乞う','恋う'].indexOf(word.verb) > -1) {
       return 'うて';
-    } else if (['る','つ','う'].indexOf(ending) > -1 || wrd.verb === '行く') {
+    } else if (['る','つ','う'].indexOf(ending) > -1 || word.verb === '行く') {
       return 'って';
     } else if(['ぶ','む','ぬ'].indexOf(ending) > -1) {
       return 'んで';
@@ -67,12 +67,12 @@ function te_base(wrd) {
     }
   }
 }
-function ta_base(wrd) {
-  var ending = wrd.verb.substr(wrd.verb.length - 1);
-  if (wrd.category === 'ichidan') {
+function ta_base(word) {
+  var ending = word.verb.substr(word.verb.length - 1);
+  if (word.category === 'ichidan') {
     return 'た';
   } else {
-    if (['る','つ','う'].indexOf(ending) > -1 || wrd.verb === '行く') {
+    if (['る','つ','う'].indexOf(ending) > -1 || word.verb === '行く') {
       return 'った';
     } else if (['ぶ','む','ぬ'].indexOf(ending) > -1) {
       return 'んだ';
@@ -88,52 +88,52 @@ function ta_base(wrd) {
 
 // VERBS
 
-function conjugate(wrd) {
-  var root = get_root(wrd),
+const verb = function(word) {
+  var root = get_root(word),
       a_stem = {
-        kanji: root.kanji + a_base(wrd),
-        kana: root.kana + a_base(wrd)
+        kanji: root.kanji + a_base(word),
+        kana: root.kana + a_base(word)
       },
       i_stem = {
-        kanji: root.kanji + i_base(wrd),
-        kana: root.kana + i_base(wrd)
+        kanji: root.kanji + i_base(word),
+        kana: root.kana + i_base(word)
       },
       u_stem = {
-        kanji: root.kanji + u_base(wrd),
-        kana: root.kana + u_base(wrd)
+        kanji: root.kanji + u_base(word),
+        kana: root.kana + u_base(word)
       },
       e_stem = {
-        kanji: root.kanji + e_base(wrd),
-        kana: root.kana + e_base(wrd)
+        kanji: root.kanji + e_base(word),
+        kana: root.kana + e_base(word)
       },
       o_stem = {
-        kanji: root.kanji + o_base(wrd),
-        kana: root.kana + o_base(wrd)
+        kanji: root.kanji + o_base(word),
+        kana: root.kana + o_base(word)
       },
       ta_stem = {
-        kanji: root.kanji + ta_base(wrd),
-        kana: root.kana + ta_base(wrd)
+        kanji: root.kanji + ta_base(word),
+        kana: root.kana + ta_base(word)
       },
       te_stem = {
-        kanji: root.kanji + te_base(wrd),
-        kana: root.kana + te_base(wrd)
+        kanji: root.kanji + te_base(word),
+        kana: root.kana + te_base(word)
       },
       potential_stem = (function(){
-        if (wrd.category === 'ichidan') {
+        if (word.category === 'ichidan') {
           return {kanji: root.kanji+'られ', kana: root.kana+'られ'};
         } else {
           return {kanji: e_stem.kanji, kana: e_stem.kana};
         }
       })(),
       causative_stem = (function(){
-        if (wrd.category === 'ichidan') {
+        if (word.category === 'ichidan') {
           return {kanji: root.kanji+'させ', kana: root.kana+'させ'};
         } else {
           return {kanji: a_stem.kanji+'せ', kana: a_stem.kana+'せ'};
         }
       })(),
       passive_stem = (function(){
-        if (wrd.category === 'ichidan') {
+        if (word.category === 'ichidan') {
           return {kanji: root.kanji+'られ', kana: root.kana+'られ'};
         } else {
           return {kanji: a_stem.kanji+'れ', kana: a_stem.kana+'れ'};
@@ -278,14 +278,14 @@ function conjugate(wrd) {
       abrupt: {
         positive: {
           kanji: (function(){
-            if (wrd.category === 'godan') {
+            if (word.category === 'godan') {
               return e_stem.kanji;
             } else {
               return root.kanji+'ろ';
             }
           })(),
           kana: (function(){
-            if (wrd.category === 'godan') {
+            if (word.category === 'godan') {
               return e_stem.kana;
             } else {
               return root.kana+'ろ';
@@ -301,7 +301,7 @@ function conjugate(wrd) {
         positive: {
           kanji: i_stem.kanji+'なさい',
           kana: i_stem.kana+'なさい'
-        }, 
+        },
         negative: {
           kanji: i_stem.kanji+'なさるな',
           kana: i_stem.kana+'なさるな'
@@ -357,9 +357,9 @@ function conjugate(wrd) {
         positive: {
           kanji: o_stem.kanji,
           kana: o_stem.kana
-          },
+        },
         negative: (function(){
-          if(wrd.category === 'ichidan') {
+          if(word.category === 'ichidan') {
             return {kanji: root.kanji+'まい', kana: root.kana+'まい'};
           } else {
             return {kanji: u_stem.kanji+'まい', kana: u_stem.kana+'まい'};
@@ -458,8 +458,8 @@ function conjugate(wrd) {
   };
 }
 
-function kuru_conjugation() {
-  return {
+const irregular_verb = {
+  kuru: {
     i_stem: { kanji: '来', kana: 'き' },
     te_stem: { kanji: '来て', kana: 'きて' },
     indicative: {
@@ -760,289 +760,590 @@ function kuru_conjugation() {
         }
       }
     }
-  };
-}
-
-function suru_conjugation(wrd) {
-  var kanji = wrd.verb.substring(0, wrd.verb.length-2);
-  var kana = wrd.reading.substring(0, wrd.reading.length-2);
-  return {
-    i_stem: {kanji: kanji+'し', kana: kana+'し'},
-    te_stem: {kanji: kanji+'して', kana: kana+'して'},
+  },
+  suru: function(word) {
+    var kanji = word.verb.substring(0, word.verb.length-2);
+    var kana = word.reading.substring(0, word.reading.length-2);
+    return {
+      i_stem: {kanji: kanji+'し', kana: kana+'し'},
+      te_stem: {kanji: kanji+'して', kana: kana+'して'},
+      indicative: {
+        plain: {
+          positive: {
+            kanji: kanji+'する',
+            kana: kana+'する'
+          },
+          negative: {
+            kanji: kanji+'しない',
+            kana: kana+'しない'
+          }
+        },
+        polite: {
+          positive: {
+            kanji: kanji+'します',
+            kana: kana+'します'
+          },
+          negative: {
+            kanji: kanji+'しません',
+            kana: kana+'しません'
+          }
+        }
+      },
+      past_indicative: {
+        plain: {
+          positive: {
+            kanji: kanji+'した',
+            kana: kana+'した'
+          },
+          negative: {
+            kanji: kanji+'しなかった',
+            kana: kana+'しなかった'
+          }
+        },
+        polite: {
+          positive: {
+            kanji: kanji+'しました',
+            kana: kana+'しました'
+          },
+          negative: {
+            kanji: kanji+'しませんでした',
+            kana: kana+'しませんでした'
+          }
+        }
+      },
+      presumptive: {
+        plain: {
+          positive: {
+            kanji: kanji+'するだろう',
+            kana: kana+'するだろう'
+          },
+          negative: {
+            kanji: kanji+'しないだろう',
+            kana: kana+'しないだろう'
+          }
+        },
+        polite: {
+          positive: {
+            kanji: kanji+'するでしょう',
+            kana: kana+'するでしょう'
+          },
+          negative: {
+            kanji: kanji+'しないでしょう',
+            kana: kana+'しないでしょう'
+          }
+        }
+      },
+      past_presumptive: {
+        plain: {
+          positive: {
+            kanji: kanji+'しただろう',
+            kana: kana+'しただろう'
+          },
+          negative: {
+            kanji: kanji+'しなかっただろう',
+            kana: kana+'しなかっただろう'
+          }
+        },
+        polite: {
+          positive: {
+            kanji: kanji+'しましたろう',
+            kana: kana+'しましたろう'
+          },
+          negative: {
+            kanji: kanji+'しなかたでしょう',
+            kana: kana+'しなかたでしょう'
+          }
+        }
+      },
+      progressive: {
+        plain: {
+          positive: {
+            kanji: kanji+'している',
+            kana: kana+'している'
+          },
+          negative: {
+            kanji: kanji+'していない',
+            kana: kana+'していない'
+          }
+        },
+        polite: {
+          positive: {
+            kanji: kanji+'しています',
+            kana: kana+'しています'
+          },
+          negative: {
+            kanji: kanji+'していません',
+            kana: kana+'していません'
+          }
+        }
+      },
+      past_progressive: {
+        plain: {
+          positive: {
+            kanji: kanji+'していた',
+            kana: kana+'していた'
+          },
+          negative: {
+            kanji: kanji+'していなかった',
+            kana: kana+'していなかった'
+          }
+        },
+        polite: {
+          positive: {
+            kanji: kanji+'していました',
+            kana: kana+'していました'
+          },
+          negative: {
+            kanji: kanji+'していませんでした',
+            kana: kana+'していませんでした'
+          }
+        }
+      },
+      imperative: {
+        abrupt: {
+          positive: {
+            kanji: kanji+'しろ',
+            kana: kana+'しろ'
+          },
+          negative: {
+            kanji: kanji+'するな',
+            kana: kana+'するな'
+          }
+        },
+        plain: {
+          positive: {
+            kanji: kanji+'しなさい',
+            kana: kana+'しなさい'
+          },
+          negative: {
+            kanji: kanji+'しなさるな',
+            kana: kana+'しなさるな'
+          }
+        }
+      },
+      request: {
+        polite: {
+          positive: {
+            kanji: kanji+'してください',
+            kana: kana+'してください'
+          },
+          negative: {
+            kanji: kanji+'しないでください',
+            kana: kana+'しないでください'
+          }
+        },
+        honorific: {
+          positive: {
+            kanji: kanji+'なさいませ',
+            kana: kana+'なさいませ'
+          },
+          negative: {
+            kanji: kanji+'なさいますな',
+            kana: kana+'なさいますな'
+          }
+        }
+      },
+      potential: {
+        plain: {
+          positive: {
+            kanji: kanji+'できる',
+            kana: kana+'できる'
+          },
+          negative: {
+            kanji: kanji+'できない',
+            kana: kana+'できない'
+          }
+        },
+        polite: {
+          positive: {
+            kanji: kanji+'できます',
+            kana: kana+'できます'
+          },
+          negative: {
+            kanji: kanji+'できません',
+            kana: kana+'できません'
+          }
+        }
+      },
+      volitional: {
+        plain: {
+          positive: {
+            kanji: kanji+' しよう',
+            kana: kana+' しよう'
+          },
+          negative: {
+            kanji: kanji+'するまい',
+            kana: kana+'するまい'
+          }
+        },
+        polite: {
+          positive: {
+            kanji: kanji+'しましょう',
+            kana: kana+'しましょう'
+          },
+          negative: {
+            kanji: kanji+'しますまい',
+            kana: kana+'しますまい'
+          }
+        }
+      },
+      causative: {
+        plain: {
+          positive: {
+            kanji: kanji+'させる',
+            kana: kana+'させる'
+          }
+        }
+      },
+      passive: {
+        plain: {
+          positive: {
+            kanji: kanji+'される',
+            kana: kana+'される'
+          }
+        }
+      },
+      provisional: {
+        plain: {
+          positive: {
+            kanji: kanji+'すれば',
+            kana: kana+'すれば'
+          },
+          negative: {
+            kanji: kanji+'しなければ',
+            kana: kana+'しなければ'
+          }
+        }
+      },
+      conditional: {
+        plain: {
+          positive: {
+            kanji: kanji+'したら',
+            kana: kana+'したら'
+          },
+          negative: {
+            kanji: kanji+'しなかったら',
+            kana: kana+'しなかったら'
+          }
+        },
+        polite: {
+          positive: {
+            kanji: kanji+'しましたら',
+            kana: kana+'しましたら'
+          },
+          negative: {
+            kanji: kanji+'しませんでしたら',
+            kana: kana+'しませんでしたら'
+          }
+        }
+      }
+    };
+  },
+  aru: {
+    i_stem: {kanji: "有り", kana: "あり"},
+    te_stem: {kanji: "有って", kana: "あって"},
     indicative: {
       plain: {
         positive: {
-          kanji: kanji+'する',
-          kana: kana+'する'
+          kanji: "有る",
+          kana: "ある"
         },
         negative: {
-          kanji: kanji+'しない',
-          kana: kana+'しない'
+          kanji: "無い",
+          kana: "ない"
         }
       },
       polite: {
         positive: {
-          kanji: kanji+'します',
-          kana: kana+'します'
+          kanji: "有ります",
+          kana: "あります"
         },
         negative: {
-          kanji: kanji+'しません',
-          kana: kana+'しません'
+          kanji: "有りません",
+          kana: "ありません"
         }
       }
     },
     past_indicative: {
       plain: {
         positive: {
-          kanji: kanji+'した',
-          kana: kana+'した'
+          kanji: "有った",
+          kana: "あった"
         },
         negative: {
-          kanji: kanji+'しなかった',
-          kana: kana+'しなかった'
+          kanji: "無かった",
+          kana: "なかった"
         }
       },
       polite: {
         positive: {
-          kanji: kanji+'しました',
-          kana: kana+'しました'
+          kanji: "有りました",
+          kana: "ありました"
         },
         negative: {
-          kanji: kanji+'しませんでした',
-          kana: kana+'しませんでした'
+          kanji: "有りませんでした",
+          kana: "ありませんでした"
         }
       }
     },
     presumptive: {
       plain: {
         positive: {
-          kanji: kanji+'するだろう',
-          kana: kana+'するだろう'
+          kanji: "有るだろう",
+          kana: "あるだろう"
         },
         negative: {
-          kanji: kanji+'しないだろう',
-          kana: kana+'しないだろう'
+          kanji: "有らないだろう",
+          kana: "あらないだろう"
         }
       },
       polite: {
         positive: {
-          kanji: kanji+'するでしょう',
-          kana: kana+'するでしょう'
+          kanji: "有るでしょう",
+          kana: "あるでしょう"
         },
         negative: {
-          kanji: kanji+'しないでしょう',
-          kana: kana+'しないでしょう'
+          kanji: "有らないでしょう",
+          kana: "あらないでしょう"
         }
       }
     },
     past_presumptive: {
       plain: {
         positive: {
-          kanji: kanji+'しただろう',
-          kana: kana+'しただろう'
+          kanji: "有っただろう",
+          kana: "あっただろう"
         },
         negative: {
-          kanji: kanji+'しなかっただろう',
-          kana: kana+'しなかっただろう'
+          kanji: "有らなかっただろう",
+          kana: "あらなかっただろう"
         }
       },
       polite: {
         positive: {
-          kanji: kanji+'しましたろう',
-          kana: kana+'しましたろう'
+          kanji: "有ったでしょう",
+          kana: "あったでしょう"
         },
         negative: {
-          kanji: kanji+'しなかたでしょう',
-          kana: kana+'しなかたでしょう'
+          kanji: "有らなかったでしょう",
+          kana: "あらなかったでしょう"
         }
       }
     },
     progressive: {
       plain: {
         positive: {
-          kanji: kanji+'している',
-          kana: kana+'している'
+          kanji: "有っている",
+          kana: "あっている"
         },
         negative: {
-          kanji: kanji+'していない',
-          kana: kana+'していない'
+          kanji: "無くていない",
+          kana: "なくていない"
         }
       },
       polite: {
         positive: {
-          kanji: kanji+'しています',
-          kana: kana+'しています'
+          kanji: "有っています",
+          kana: "あっています"
         },
         negative: {
-          kanji: kanji+'していません',
-          kana: kana+'していません'
+          kanji: "無くていません",
+          kana: "なくていません"
         }
       }
     },
     past_progressive: {
       plain: {
         positive: {
-          kanji: kanji+'していた',
-          kana: kana+'していた'
+          kanji: "有っていた",
+          kana: "あっていた"
         },
         negative: {
-          kanji: kanji+'していなかった',
-          kana: kana+'していなかった'
+          kanji: "無くていなかった",
+          kana: "なくていなかった"
         }
       },
       polite: {
         positive: {
-          kanji: kanji+'していました',
-          kana: kana+'していました'
+          kanji: "有っていました",
+          kana: "あっていました"
         },
         negative: {
-          kanji: kanji+'していませんでした',
-          kana: kana+'していませんでした'
+          kanji: "無くていませんでした",
+          kana: "なくていませんでした"
         }
       }
     },
     imperative: {
       abrupt: {
         positive: {
-          kanji: kanji+'しろ',
-          kana: kana+'しろ'
+          kanji: "有れ",
+          kana: "あれ"
         },
         negative: {
-          kanji: kanji+'するな',
-          kana: kana+'するな'
+          kanji: "有るな",
+          kana: "あるな"
         }
       },
       plain: {
         positive: {
-          kanji: kanji+'しなさい',
-          kana: kana+'しなさい'
+          kanji: "有りなさい",
+          kana: "ありなさい"
         },
         negative: {
-          kanji: kanji+'しなさるな',
-          kana: kana+'しなさるな'
+          kanji: "有りなさるな",
+          kana: "ありなさるな"
         }
       }
     },
     request: {
       polite: {
         positive: {
-          kanji: kanji+'してください',
-          kana: kana+'してください'
+          kanji: "有ってください",
+          kana: "あってください"
         },
         negative: {
-          kanji: kanji+'しないでください',
-          kana: kana+'しないでください'
+          kanji: "無いでください",
+          kana: "ないでくださいい"
         }
       },
       honorific: {
         positive: {
-          kanji: kanji+'なさいませ',
-          kana: kana+'なさいませ'
+          kanji: "お有りなさいませ",
+          kana: "おありなさいませ"
         },
         negative: {
-          kanji: kanji+'なさいますな',
-          kana: kana+'なさいますな'
+          kanji: "お有りなさいますな",
+          kana: "おありなさいますな"
         }
       }
     },
     potential: {
       plain: {
         positive: {
-          kanji: kanji+'できる',
-          kana: kana+'できる'
+          kanji: "有れる",
+          kana: "あれる"
         },
         negative: {
-          kanji: kanji+'できない',
-          kana: kana+'できない'
+          kanji: "有れない",
+          kana: "あれない"
         }
       },
       polite: {
         positive: {
-          kanji: kanji+'できます',
-          kana: kana+'できます'
+          kanji: "有れます",
+          kana: "あれます"
         },
         negative: {
-          kanji: kanji+'できません',
-          kana: kana+'できません'
+          kanji: "有れません",
+          kana: "あれません"
         }
       }
     },
     volitional: {
       plain: {
         positive: {
-          kanji: kanji+' しよう',
-          kana: kana+' しよう'
+          kanji: "有ろう",
+          kana: "あろう"
         },
         negative: {
-          kanji: kanji+'するまい',
-          kana: kana+'するまい'
+          kanji: "有るまい",
+          kana: "あるまい"
         }
       },
       polite: {
         positive: {
-          kanji: kanji+'しましょう',
-          kana: kana+'しましょう'
+          kanji: "有りましょう",
+          kana: "ありましょう"
         },
         negative: {
-          kanji: kanji+'しますまい',
-          kana: kana+'しますまい'
+          kanji: "有りますまい",
+          kana: "ありますまい"
         }
       }
     },
     causative: {
       plain: {
         positive: {
-          kanji: kanji+'させる',
-          kana: kana+'させる'
+          kanji: "有らせる",
+          kana: "あらせる"
+        },
+        negative: {
+          kanji: "有らせない",
+          kana: "あらせない"
+        }
+      },
+      polite: {
+        positive: {
+          kanji: "有らせます",
+          kana: "あらせます"
+        },
+        negative: {
+          kanji: "有らせません",
+          kana: "あらせません"
         }
       }
     },
     passive: {
       plain: {
         positive: {
-          kanji: kanji+'される',
-          kana: kana+'される'
+          kanji: "有られる",
+          kana: "あられる"
+        },
+        negative: {
+          kanji: "有られない",
+          kana: "あられない"
+        }
+      },
+      polite: {
+        positive: {
+          kanji: "有られます",
+          kana: "あられます"
+        },
+        negative: {
+          kanji: "有られません",
+          kana: "あられません"
         }
       }
     },
     provisional: {
       plain: {
         positive: {
-          kanji: kanji+'すれば',
-          kana: kana+'すれば'
+          kanji: "有れば",
+          kana: "あれば"
         },
         negative: {
-          kanji: kanji+'しなければ',
-          kana: kana+'しなければ'
+          kanji: "無ければ",
+          kana: "なければ"
         }
       }
     },
     conditional: {
       plain: {
         positive: {
-          kanji: kanji+'したら',
-          kana: kana+'したら'
+          kanji: "有ったら",
+          kana: "あったら"
         },
         negative: {
-          kanji: kanji+'しなかったら',
-          kana: kana+'しなかったら'
+          kanji: "無かったら",
+          kana: "なかったら"
         }
       },
       polite: {
         positive: {
-          kanji: kanji+'しましたら',
-          kana: kana+'しましたら'
+          kanji: "有りましたら",
+          kana: "ありましたら"
         },
         negative: {
-          kanji: kanji+'しませんでしたら',
-          kana: kana+'しませんでしたら'
+          kanji: "有りませんでしたら",
+          kana: "ありませんでしたら"
         }
       }
     }
-  };  
-}
+  }
+};
 
-function eng_conjugation(verb) {
+const english_verb = function(verb) {
   if (verb.infinitive.split(' ')[1] !== 'be') {
     return {
       participle: verb.conj.participle,
@@ -1171,13 +1472,13 @@ function eng_conjugation(verb) {
 
 // ADJ
 
-var a_sounds = ['あ','か','さ','た','な','は','ま','ら','が','ざ','だ','ば','ぱ'];
-var u_sounds = ['う','く','す','つ','ぬ','ふ','む','る','ぐ','ず','づ','ぶ','ぷ'];
-var i_sounds = ['い','き','し','ち','に','ひ','み','り','ぎ','じ','ぢ','び','ぴ'];
-var o_sounds = ['お','こ','そ','と','の','ほ','も','ろ','ご','ぞ','ど','ぼ','ぽ',];
+const a_sounds = ['あ','か','さ','た','な','は','ま','ら','が','ざ','だ','ば','ぱ'];
+const u_sounds = ['う','く','す','つ','ぬ','ふ','む','る','ぐ','ず','づ','ぶ','ぷ'];
+const i_sounds = ['い','き','し','ち','に','ひ','み','り','ぎ','じ','ぢ','び','ぴ'];
+const o_sounds = ['お','こ','そ','と','の','ほ','も','ろ','ご','ぞ','ど','ぼ','ぽ',];
 
-function i_adj_conjugation(wrd) {
-  var stem = {kanji: wrd.word.substring(0, wrd.word.length-1), kana: wrd.reading.substring(0, wrd.reading.length-1)};
+const i_adjective = function(word) {
+  var stem = {kanji: word.word.substring(0, word.word.length-1), kana: word.reading.substring(0, word.reading.length-1)};
   var gstem = {};
   var last_sound = stem.kana[stem.kana.length-1];
   var kanji_stem_minus_one = (stem.kanji.substring(0,stem.kanji.length-1).length > 0) ? stem.kanji.substring(0,stem.kanji.length-1) : stem.kanji ;
@@ -1205,11 +1506,11 @@ function i_adj_conjugation(wrd) {
   return {
     indicative: {
       plain: {
-        positive: {kanji: wrd.word, kana: wrd.reading},
+        positive: {kanji: word.word, kana: word.reading},
         negative: {kanji: stem.kanji+'くない', kana: stem.kana+'くない'}
       },
       polite: {
-        positive: {kanji: wrd.word+'です', kana: wrd.reading+'です'},
+        positive: {kanji: word.word+'です', kana: word.reading+'です'},
         negative: {kanji: stem.kanji+'くないです', kana: stem.kana+'くないです'}
       }
     },
@@ -1225,11 +1526,11 @@ function i_adj_conjugation(wrd) {
     },
     presumptive: {
       plain: {
-        positive: {kanji: wrd.word+'だろう', kana: wrd.reading+'だろう'},
+        positive: {kanji: word.word+'だろう', kana: word.reading+'だろう'},
         negative: {kanji: stem.kanji+'くないだろう', kana: stem.kana+'くないだろう'}
       },
       polite: {
-        positive: {kanji: wrd.word+'でしょう', kana: wrd.reading+'でしょう'},
+        positive: {kanji: word.word+'でしょう', kana: word.reading+'でしょう'},
         negative: {kanji: stem.kanji+'くないでしょう', kana: stem.kana+'くないでしょう'}
       }
     },
@@ -1275,123 +1576,132 @@ function i_adj_conjugation(wrd) {
     noun: {kanji: stem.kanji+'さ', kana: stem.kana+'さ'},
     looks: {kanji: stem.kanji+'そう', kana: stem.kana+'そう'},
     too: {kanji: stem.kanji+'すぎる', kana: stem.kana+'すぎる'},
-    attributive: {kanji: wrd.word, kana: wrd.reading}
+    attributive: {kanji: word.word, kana: word.reading}
   }
-}
+};
 
-function na_adj_conjugation(wrd) {
+const na_adjective = function(word) {
   return {
     indicative: {
       plain: {
-        positive: {kanji: wrd.word+'だ', kana: wrd.reading+'だ'},
-        negative: {kanji: wrd.word+'ではない', kana: wrd.reading+'ではない'}
+        positive: {kanji: word.word+'だ', kana: word.reading+'だ'},
+        negative: {kanji: word.word+'ではない', kana: word.reading+'ではない'}
       },
       polite: {
-        positive: {kanji: wrd.word+'です', kana: wrd.reading+'です'},
-        negative: {kanji: wrd.word+'ではありません', kana: wrd.reading+'ではありません'}
+        positive: {kanji: word.word+'です', kana: word.reading+'です'},
+        negative: {kanji: word.word+'ではありません', kana: word.reading+'ではありません'}
       }
     },
     past_indicative: {
       plain: {
-        positive: {kanji: wrd.word+'だった', kana: wrd.reading+'だった'},
-        negative: {kanji: wrd.word+'ではなかった', kana: wrd.reading+'ではなかった'}
+        positive: {kanji: word.word+'だった', kana: word.reading+'だった'},
+        negative: {kanji: word.word+'ではなかった', kana: word.reading+'ではなかった'}
       },
       polite: {
-        positive: {kanji: wrd.word+'でした', kana: wrd.reading+'でした'},
-        negative: {kanji: wrd.word+'ではありませんでした', kana: wrd.reading+'ではありませんでした'}
+        positive: {kanji: word.word+'でした', kana: word.reading+'でした'},
+        negative: {kanji: word.word+'ではありませんでした', kana: word.reading+'ではありませんでした'}
       }
     },
     presumptive: {
       plain: {
-        positive: {kanji: wrd.word+'だろう', kana: wrd.reading+'だろう'},
-        negative: {kanji: wrd.word+'ではなかろう', kana: wrd.reading+'ではなかろう'}
+        positive: {kanji: word.word+'だろう', kana: word.reading+'だろう'},
+        negative: {kanji: word.word+'ではなかろう', kana: word.reading+'ではなかろう'}
       },
       polite: {
-        positive: {kanji: wrd.word+'でしょう', kana: wrd.reading+'でしょう'},
-        negative: {kanji: wrd.word+'ではないでしょう', kana: wrd.reading+'ではないでしょう'}
+        positive: {kanji: word.word+'でしょう', kana: word.reading+'でしょう'},
+        negative: {kanji: word.word+'ではないでしょう', kana: word.reading+'ではないでしょう'}
       }
     },
     past_presumptive: {
       plain: {
-        positive: {kanji: wrd.word+'だったろう', kana: wrd.reading+'だったろう'},
-        negative: {kanji: wrd.word+'ではなかったろう', kana: wrd.reading+'ではなかったろう'}
+        positive: {kanji: word.word+'だったろう', kana: word.reading+'だったろう'},
+        negative: {kanji: word.word+'ではなかったろう', kana: word.reading+'ではなかったろう'}
       },
       polite: {
-        positive: {kanji: wrd.word+'だったでしょう', kana: wrd.reading+'だったでしょう'},
-        negative: {kanji: wrd.word+'ではなかったでしょう', kana: wrd.reading+'ではなかったでしょう'}
+        positive: {kanji: word.word+'だったでしょう', kana: word.reading+'だったでしょう'},
+        negative: {kanji: word.word+'ではなかったでしょう', kana: word.reading+'ではなかったでしょう'}
       }
     },
     provisional: {
       plain: {
-        positive: {kanji: wrd.word+'なら', kana: wrd.reading+'なら'},
-        negative: {kanji: wrd.word+'でなければ', kana: wrd.reading+'でなければ'}
+        positive: {kanji: word.word+'なら', kana: word.reading+'なら'},
+        negative: {kanji: word.word+'でなければ', kana: word.reading+'でなければ'}
       }
     },
     continuative: {
       plain: {
-        positive: {kanji: wrd.word+'で', kana: wrd.reading+'で'},
-        negative: {kanji: wrd.word+'ではなくて', kana: wrd.reading+'ではなくて'}
+        positive: {kanji: word.word+'で', kana: word.reading+'で'},
+        negative: {kanji: word.word+'ではなくて', kana: word.reading+'ではなくて'}
       },
       polite: {
-        positive: {kanji: wrd.word+'でして', kana: wrd.reading+'でして'},
-        negative: {kanji: wrd.word+'ではありませんでして', kana: wrd.reading+'ではありませんでして'}
+        positive: {kanji: word.word+'でして', kana: word.reading+'でして'},
+        negative: {kanji: word.word+'ではありませんでして', kana: word.reading+'ではありませんでして'}
       }
     },
     conditional: {
       plain: {
-        positive: {kanji: wrd.word+'だったら', kana: wrd.reading+'だったら'},
-        negative: {kanji: wrd.word+'でなかったら', kana: wrd.reading+'でなかったら'}
+        positive: {kanji: word.word+'だったら', kana: word.reading+'だったら'},
+        negative: {kanji: word.word+'でなかったら', kana: word.reading+'でなかったら'}
       },
       polite: {
-        positive: {kanji: wrd.word+'でしたら', kana: wrd.reading+'でしたら'},
-        negative: {kanji: wrd.word+'でありませんでしたら', kana: wrd.reading+'でありませんでしたら'}
+        positive: {kanji: word.word+'でしたら', kana: word.reading+'でしたら'},
+        negative: {kanji: word.word+'でありませんでしたら', kana: word.reading+'でありませんでしたら'}
       }
     },
-    adverb: {kanji: wrd.word+'に', kana: wrd.reading+'に'},
-    become: {kanji: wrd.word+'になる', kana: wrd.reading+'になる'},
-    unbearably: {kanji: wrd.word+'でたまらない', kana: wrd.reading+'でたまらない'},
-    noun: {kanji: wrd.word, kana: wrd.reading},
-    looks: {kanji: wrd.word+'そう', kana: wrd.reading+'そう'},
-    too: {kanji: wrd.word+'すぎる', kana: wrd.reading+'すぎる'},
-    attributive: {kanji: wrd.word+'な', kana: wrd.reading+'な'}
+    adverb: {kanji: word.word+'に', kana: word.reading+'に'},
+    become: {kanji: word.word+'になる', kana: word.reading+'になる'},
+    unbearably: {kanji: word.word+'でたまらない', kana: word.reading+'でたまらない'},
+    noun: {kanji: word.word, kana: word.reading},
+    looks: {kanji: word.word+'そう', kana: word.reading+'そう'},
+    too: {kanji: word.word+'すぎる', kana: word.reading+'すぎる'},
+    attributive: {kanji: word.word+'な', kana: word.reading+'な'}
   };
-}
+};
 
-function eng_adj_conjugation(wrd) {
+const english_adjective = function(word) {
   return {
     indicative: {
-      positive: ['are '+wrd],
-      negative: ['aren\'t '+wrd]
+      positive: ['are '+word],
+      negative: ['aren\'t '+word]
     },
     past_indicative: {
-      positive: ['were '+wrd],
-      negative: ['weren\'t '+wrd]
+      positive: ['were '+word],
+      negative: ['weren\'t '+word]
     },
     presumptive: {
-      positive: ['probably are '+wrd],
-      negative: ['probably aren\'t '+wrd]
+      positive: ['probably are '+word],
+      negative: ['probably aren\'t '+word]
     },
     past_presumptive: {
-      positive: ['probably were '+wrd, 'probably have been '+wrd],
-      negative: ['probably weren\'t '+wrd, 'probably haven\'t been '+wrd]
+      positive: ['probably were '+word, 'probably have been '+word],
+      negative: ['probably weren\'t '+word, 'probably haven\'t been '+word]
     },
     provisional: {
-      positive: ['if X are '+wrd],
-      negative: ['if X aren\'t '+wrd]
+      positive: ['if X are '+word],
+      negative: ['if X aren\'t '+word]
     },
     continuative: {
-      positive: ['are '+wrd+' and X'],
-      negative: ['aren\'t '+wrd+' and X']
+      positive: ['are '+word+' and X'],
+      negative: ['aren\'t '+word+' and X']
     },
     conditional: {
-      positive: ['if X were '+wrd, 'when X are '+wrd],
-      negative: ['if X weren\'t '+wrd, 'when X aren\'t '+wrd]
+      positive: ['if X were '+word, 'when X are '+word],
+      negative: ['if X weren\'t '+word, 'when X aren\'t '+word]
     },
-    adverb: [wrd+'-ly'],
-    become: ['become '+wrd],
-    unbearably: ['unbearably '+wrd],
-    noun: [wrd+'-ness'],
-    looks: ['look '+wrd, 'appear to be '+wrd],
-    too: ['too '+wrd]
+    adverb: [word+'-ly'],
+    become: ['become '+word],
+    unbearably: ['unbearably '+word],
+    noun: [word+'-ness'],
+    looks: ['look '+word, 'appear to be '+word],
+    too: ['too '+word]
   }
-}
+};
+
+const conjugate = {
+  verb,
+  irregular_verb,
+  english_verb,
+  i_adjective,
+  na_adjective,
+  english_adjective
+};

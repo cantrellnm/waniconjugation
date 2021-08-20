@@ -6,17 +6,16 @@
   "repository": "",
   "author": "cantrellnm <cantrellnm@gmail.com>",
   "scripts": {
+    "build": "sh import_data.sh",
     "start": "node server.js",
     "dev": "nodemon server.js"
   },
   "engines": {
-    "node": "^12.0"
+    "node": "^14.0"
   },
   "dependencies": {
     "axios": "^0.20.0",
     "express": "^4.14.0",
-    "gulp": "^4.0.2",
-    "gulp-mongodb-data": "^3.0.1",
     "mongoose": "^5.9.0",
     "pug": "^2.0.0"
   },

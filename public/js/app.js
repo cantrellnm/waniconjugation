@@ -8,12 +8,6 @@ Array.prototype.shuffle = function() {
 var app = angular.module('waniConj', []);
 app.value('wanakana', wanakana);
 app.value('conjugate', conjugate);
-app.value('kuru_conjugation', kuru_conjugation);
-app.value('suru_conjugation', suru_conjugation);
-app.value('suru_conjugation', eng_conjugation);
-app.value('i_adj_conjugation', i_adj_conjugation);
-app.value('na_adj_conjugation', na_adj_conjugation);
-app.value('eng_adj_conjugation', eng_adj_conjugation);
 app.value('responsiveVoice', responsiveVoice);
 
 app.controller('AppController', function($scope, $http, filterFilter) {
@@ -68,10 +62,12 @@ app.controller('AppController', function($scope, $http, filterFilter) {
   
   $scope.verbConjugations = function(word) {
     var conjugations;
-    if (word.category==='irregular')
-      conjugations = (word.verb === '来る') ? kuru_conjugation() : suru_conjugation(word) ;
+    if (word.verb === '有る')
+      conjugations = conjugate.irregular_verb.aru;
+    else if (word.category === 'irregular')
+      conjugations = (word.verb === '来る') ? conjugate.irregular_verb.kuru : conjugate.irregular_verb.suru(word) ;
     else
-      conjugations = conjugate(word);
+      conjugations = conjugate.verb(word);
     return conjugations;
   };
   $scope.setWord = function(word, list) {
@@ -79,18 +75,18 @@ app.controller('AppController', function($scope, $http, filterFilter) {
     if (list === 'verbs')
       $scope.word_conjugations = $scope.verbConjugations(word);
     else
-      $scope.word_conjugations = (word.category === 'i-adjective') ? i_adj_conjugation(word) : na_adj_conjugation(word) ;
+      $scope.word_conjugations = (word.category === 'i-adjective') ? conjugate.i_adjective(word) : conjugate.na_adjective(word) ;
   };
   $scope.setEng = function(wrd, list) {
     if (list === 'verbs') {
       $scope.fetchData('/api/en_verbs/'+wrd, function(data) {
         $scope.eng = data[0];
-        $scope.eng_conjugations = eng_conjugation(data[0]);
+        $scope.eng_conjugations = conjugate.english_verb(data[0]);
       });
       // $scope.eng = $scope.engList.filter(function(e){return e.infinitive === wrd})[0];
     } else if (list === 'adj') {
       $scope.eng = wrd;
-      $scope.eng_conjugations = eng_adj_conjugation($scope.eng);
+      $scope.eng_conjugations = conjugate.english_adjective($scope.eng);
     }
   };
   $scope.clearWord = function() {
