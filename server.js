@@ -25,7 +25,7 @@ app.use((req, res, next) => {
 app.use('/', routes);
 app.use(express.static(path.resolve(__dirname, 'public')));
 
-server.listen(process.env.PORT || 3000, process.env.IP || "0.0.0.0", function(){
+server.listen(process.env.PORT || 3000, function() {
   const addr = server.address();
-  console.log("Server listening at", addr.address + ":" + addr.port);
+  console.log("Server listening on port ", addr.port);
 });

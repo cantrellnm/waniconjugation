@@ -2,13 +2,13 @@
 
 Application to practice conjugating and translating Japanese verbs and adjectives that are taught by [WaniKani](https://www.wanikani.com/).
 
-Use app at: [waniconjugation.herokuapp.com](http://waniconjugation.herokuapp.com/)
+Use app at: [waniconjugation.cantrellnm.dev](http://waniconjugation.cantrellnm.dev/)
 
 ## For developers
 
-A copy of the MongoDB collections are saved as `.json` files in the `data` folder and can be imported to your local db (while it's running) with ~~yarn build or npm run build~~ `yarn data` or `npm run data`.
+A copy of the MongoDB collections are saved as `.json` files in the `data` folder and can be imported to your local db (while it's running) with `yarn data` or `npm run data`.
 
-~~These files are imported when code gets deployed, so making changes to these files means making changes to the data on the site. If any data needs to be corrected, these files are where you do it.~~
+Merge requests welcome.
 
 ## To Do:
 
@@ -17,7 +17,7 @@ A copy of the MongoDB collections are saved as `.json` files in the `data` folde
 - clarify exceptions for some suru verbs? (past nai, imperative, volitional) (P.S. I don't remember what this note means.)
 - find out why progressive, potential, causative, and passive tenses are listed as category: ichidan and check if it's true of godan verbs like 上る, 入る for progressive (and other tenses?)
 
-## Fix:
+## Needs fixing:
 
 - check conjugations of these godan verbs with -ru ending after changing category to godan
   - 見返る, 走る, 気に入る, 帰る, 交じる
@@ -38,9 +38,9 @@ English conjugations:
 - 手伝う - passive: "will helped" -> "will be helped"
 - 手伝う - provisional: "if X help" -> "if X helps"
 
-Missing:
+Missing vocab:
 
 - 運がいい (Level 10 adj)
 - 気持ちいい (Level 11 adj)
 - 丁度いい (Level 11 adj)
-- probably more, see to do list about updating words
+- probably more, see to-do list about updating words
